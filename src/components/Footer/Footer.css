@@ -1,0 +1,81 @@
+/* Footer Styles */
+.footer {
+  background: #282829;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Text Animation */
+.footer p {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #7282df;
+}
+
+/* Glowing Effect */
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #7282df, #10235f);
+  bottom: 0;
+  left: 0;
+  animation: glowMove 3s infinite linear;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes glowMove {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+/* Responsive Fixes */
+@media (max-width: 480px) {
+  .footer p {
+      font-size: 0.9rem;
+  }
+  
+  .social-icon {
+      font-size: 1.2rem;
+  }
+}

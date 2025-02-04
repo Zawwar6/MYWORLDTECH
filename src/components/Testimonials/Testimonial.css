@@ -1,0 +1,112 @@
+.testimonial-section {
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.testimonial-header h2{
+  color: black;
+}
+
+.testimonial-section.animate {
+  opacity: 1; /* Show section when it comes into view */
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /* Hide content that goes out of the slider */
+}
+
+.testimonial-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 300px;
+  opacity: 0;
+  transform: translateY(30px) scale(0.8) rotate(5deg); /* Start from below, small scale, and rotated */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0); /* Cards end up in place with normal size and no rotation */
+}
+
+.testimonial-card:nth-child(1) {
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+}
+
+.testimonial-card:nth-child(2) {
+  animation: fadeInUp 1s ease-out 0.4s forwards;
+}
+
+.testimonial-card:nth-child(3) {
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+.testimonial-image {
+  margin-bottom: 20px;
+}
+
+.testimonial-img-small {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+  border-radius: 50%; /* Optional: Make the image circular */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+}
+
+
+.testimonial-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.testimonial-quote {
+  font-size: 3rem;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.testimonial-content p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial-content span {
+  font-size: 1rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8) rotate(5deg); /* Cards start from below, small and rotated */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0); /* Cards end up in place with normal size and no rotation */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    max-width: 100%;
+    padding: 30px;
+  }
+
+  .testimonial-img {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -1,0 +1,128 @@
+.about-us {
+  padding: 60px 20px;
+  background-color: linear-gradient( #ffffff, #ffffff); /* Charcoal grey and deep red */
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.about-us-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.about-us-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2); /* Soft shadow for smooth depth */
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.about-us-content {
+  max-width: 600px;
+  padding-left: 40px;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s forwards;
+  animation-delay: 0.7s;
+}
+
+.about-us h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #ECF0F1; /* Bright and clean text color */
+  font-weight: bolder;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* More pronounced shadow for extra depth */
+}
+
+.about-us p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #BDC3C7; /* Light grey text for readability */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow for better legibility */
+}
+
+.cta-btn {
+  background-color: #1F618D; /* Bold, deep blue */
+  color: white;
+  font-size: 1.1rem;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #154360; /* Darker blue on hover for a more interactive feel */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Fade-in and Slide-up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in from left animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide-in from right animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us-container {
+    flex-direction: column; /* Stacks image and content vertically */
+    text-align: center; /* Centers content */
+  }
+
+  .about-us-image img {
+    max-width: 80%; /* Makes image slightly smaller */
+  }
+
+  .about-us-content {
+    padding-left: 0; /* Removes left padding */
+  }
+
+  .cta-btn {
+    padding: 12px 24px; /* Adjusts button size */
+    font-size: 1rem;
+  }
+}
