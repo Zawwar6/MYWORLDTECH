@@ -22,7 +22,9 @@
   flex-wrap: wrap;
   gap: 40px;
 }
-
+.services h1{
+  color: white;
+}
 .service-card {
   background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Soft gradient background for cards */
   width: 300px;

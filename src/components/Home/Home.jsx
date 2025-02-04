@@ -122,8 +122,8 @@ const Home = () => {
           <div><img src="/ABAD.png" alt="Brand 2" className="brand-logo" /></div>
           <div><img src="/KIA.png" alt="Brand 3" className="brand-logo" /></div>
           <div><img src="/Microsoft.png" alt="Brand 4" className="brand-logo" /></div>
-          <div><img src="/Fpci.png" alt="Brand 4" className="brand-logo" /></div>
           <div><img src="/aws.png" alt="Brand 5" className="brand-logo" /></div>
+          <div><img src="/Fpci.png" alt="Brand 4" className="brand-logo" /></div>
           {/* Add more logos as needed */}
         </Slider>
       </section>
