@@ -3,7 +3,6 @@
   padding: 100px 50px;
   text-align: center;
   animation: fadeInUp 1s forwards;
-  border-radius: 15px;
   color: #000000;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
