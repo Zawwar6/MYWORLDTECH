@@ -55,7 +55,7 @@
 }
 
 .cta-btn {
-  background-color: #1F618D; /* Bold, deep blue */
+  background-color: #1F618D; 
   color: white;
   font-size: 1.1rem;
   padding: 14px 28px;
@@ -66,8 +66,8 @@
 }
 
 .cta-btn:hover {
-  background-color: #154360; /* Darker blue on hover for a more interactive feel */
-  transform: scale(1.05); /* Slight zoom effect */
+  background-color: #154360; 
+  transform: scale(1.05); 
 }
 
 /* Fade-in and Slide-up Animation */

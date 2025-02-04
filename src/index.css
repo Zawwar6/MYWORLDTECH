@@ -1,3 +1,6 @@
+body {
+  touch-action: manipulation; /* Disable pinch-to-zoom and other gestures */
+}
 
 .modal {
     position: fixed;

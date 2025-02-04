@@ -6,7 +6,6 @@ const ReadyStart = () => {
     <div>
        <section className="cta-section">
         <h2>Ready to Start Your Project?</h2>
-        <button className="cta-btn">Contact Us</button>
       </section>
     </div>
   )

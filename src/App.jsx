@@ -4,12 +4,11 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Service from './components/Services/Service';
-import Portfolio from './components/Portfolio/Portfolio';
-import Testimonial from './components/Testimonials/Testimonial';
-import ReadyStart from './components/ReadyStart/ReadyStart';
-import Contact from './components/Contact/Contact';
+
+
+
 import Footer from './components/Footer/Footer';
-import Slider from './components/Slider/Slider';
+import Contact from './components/Contacta/Contact';
 
 const App = () => {
   return (

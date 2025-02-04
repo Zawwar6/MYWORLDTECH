@@ -9,7 +9,7 @@ const Service = () => {
         <div className="service-cards">
           <div className="service-card">
           <h3>Website Design & Development</h3>
-<p>Crafting beautiful, responsive websites that capture attention and drive results. We design seamless user experiences tailored to your business, from sleek landing pages to robust e-commerce platforms.</p>
+<p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
             <button className="cta-btn">Learn More</button>
           </div>
           <div className="service-card">
@@ -20,7 +20,7 @@ const Service = () => {
           </div>
           <div className="service-card">
             <h3>SEO & Social Media Marketing</h3>
-            <p>We help businesses build a powerful and memorable brand identity that resonates across digital platforms, enhancing your presence on social media and improving visibility with targeted SEO strategies.</p>
+            <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
 
             <button className="cta-btn">Learn More</button>
           </div>

@@ -1,0 +1,146 @@
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+   
+  }
+  
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #333;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .task-button {
+    border: 2px solid #333;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .task-button:hover {
+    background: #333;
+    color: white;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-field {
+    border: none;
+    border-bottom: 2px solid #333;
+    padding: 8px;
+    outline: none;
+    font-size: 18px;
+    background: transparent;
+  }
+  
+  /* Budget Section Styling */
+  .budget-title {
+    margin-top: 40px;
+  }
+  
+  .budget-group {
+    margin-bottom: 30px;
+  }
+  
+  .budget-button {
+    border-color: #000000;
+    color: #000000;
+  }
+  
+  .budget-button:hover {
+    background: #000000;
+    color: white;
+  }
+
+  .submit-button {
+    background: linear-gradient(135deg, #4838c1, #2c2ca7);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(135deg, #0f56b3, #234ce0);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .submit-button:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  /* Project Details Section */
+  .sub-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  
+  .separator {
+    width: 100%;
+    height: 2px;
+    background: #333;
+    margin-top: 10px;
+    border-radius: 2px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    .task-button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  
+    .title,
+    .sub-title {
+      font-size: 22px;
+    }
+  
+    .input-field {
+      font-size: 16px;
+    }
+  }
+  

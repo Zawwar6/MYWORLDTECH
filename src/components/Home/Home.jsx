@@ -95,6 +95,12 @@ const Home = () => {
          }
        };
      }, []);
+
+     const tasks = ['Branding', 'Photography', 'Social Media', 'Videography', 'UI/UX'];
+     const fields = ['Name', 'Email', 'Company name', 'Your Designation', 'Phone Number'];
+     const budget = ['$2000-$5000' , '$5000-$10000' , 'more than $10000']
+
+
   return (
     <div className="home-container">
       <section className="hero">
@@ -116,6 +122,7 @@ const Home = () => {
           <div><img src="/ABAD.png" alt="Brand 2" className="brand-logo" /></div>
           <div><img src="/KIA.png" alt="Brand 3" className="brand-logo" /></div>
           <div><img src="/Microsoft.png" alt="Brand 4" className="brand-logo" /></div>
+          <div><img src="/Fpci.png" alt="Brand 4" className="brand-logo" /></div>
           <div><img src="/aws.png" alt="Brand 5" className="brand-logo" /></div>
           {/* Add more logos as needed */}
         </Slider>
@@ -148,7 +155,7 @@ const Home = () => {
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
           <h3>Website Design & Development</h3>
-          <p>Crafting beautiful, responsive websites that capture attention and drive results. We design seamless user experiences tailored to your business, from sleek landing pages to robust e-commerce platforms.</p>
+          <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
           <button className="cta-btn">Learn More</button>
         </motion.div>
 
@@ -172,7 +179,7 @@ const Home = () => {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
         >
           <h3>SEO & Social Media Marketing</h3>
-          <p>We help businesses build a powerful and memorable brand identity that resonates across digital platforms, enhancing your presence on social media and improving visibility with targeted SEO strategies.</p>
+          <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
           <button className="cta-btn">Learn More</button>
         </motion.div>
       </div>
@@ -324,21 +331,35 @@ const Home = () => {
       {/* Call to Action Section */}
       <section className="cta-section">
         <h2>Ready to Start Your Project?</h2>
-        <button className="cta-btn">Contact Us</button>
       </section>
-
+    
       {/* Contact Section */}
-      <section className="contact">
-      <h2>Contact Us</h2>
-      <p>Have a question or need assistance? Feel free to reach out.</p>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" className="submit-btn">Send Message</button>
-      </form>
-    </section>
+      <div className="container">
+      <h2 className="title">You need to do</h2>
+      <div className="button-group">
+        {tasks.map((task, index) => (
+          <button key={index} className="task-button">{task}</button>
+        ))}
+      </div>
       
+      <form className="form-container">
+        {fields.map((field, index) => (
+          <div key={index} className="input-group">
+            <label className="label">{field}</label>
+            <input type="text" placeholder={field} className="input-field" />
+          </div>
+        ))}
+      </form>
+     <br /> <br />
+      <h2 className="title">Your Budget</h2>
+      <div className="button-group">
+        {budget.map((amount, index) => (
+          <button key={index} className="task-button">{amount}</button>
+        ))}
+      </div>
+  
+      <button type="submit" className="submit-button">Submit</button>
+    </div>
     </div>
     
   );
