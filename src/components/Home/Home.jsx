@@ -118,11 +118,11 @@ const Home = () => {
         <h2 className="brand-slider-title">Our Trusted Clients</h2>
         <br /><br /><br />
         <Slider {...sliderSettings}>
-          <div><img src="/oracle.png" alt="Brand 1" className="brand-logo" /></div>
+          <div><img src="/oc.jpg" alt="Brand 1" className="brand-logo" /></div>
           <div><img src="/ABAD.png" alt="Brand 2" className="brand-logo" /></div>
-          <div><img src="/KIA.png" alt="Brand 3" className="brand-logo" /></div>
-          <div><img src="/Microsoft.png" alt="Brand 4" className="brand-logo" /></div>
-          <div><img src="/aws.png" alt="Brand 5" className="brand-logo" /></div>
+          <div><img src="/KIAA.jpg" alt="Brand 3" className="brand-logo" /></div>
+          <div><img src="/Micro.jpg" alt="Brand 4" className="brand-logo" /></div>
+          <div><img src="/awss.jpg" alt="Brand 5" className="brand-logo" /></div>
           <div><img src="/Fpci.png" alt="Brand 4" className="brand-logo" /></div>
           {/* Add more logos as needed */}
         </Slider>
@@ -156,7 +156,9 @@ const Home = () => {
         >
           <h3>Website Design & Development</h3>
           <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
-          <button className="cta-btn">Learn More</button>
+          <Link to="/Gallery">
+            <button className="cta-btn">Learn More</button>
+          </Link>
         </motion.div>
 
         <motion.div
@@ -168,7 +170,9 @@ const Home = () => {
         >
           <h3>2D Animation & Video Editing</h3>
           <p>Bring your ideas to life with stunning 2D animations and professional video editing that captivate your audience and boost your brand visibility.</p>
-          <button className="cta-btn">Learn More</button>
+          <Link to="/gallery">
+            <button className="cta-btn">Learn More</button>
+          </Link>
         </motion.div>
 
         <motion.div
@@ -180,7 +184,9 @@ const Home = () => {
         >
           <h3>SEO & Social Media Marketing</h3>
           <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
-          <button className="cta-btn">Learn More</button>
+          <Link to="/gallery">
+            <button className="cta-btn">Learn More</button>
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -136,23 +136,35 @@
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
+  
   .navbar-links {
     display: none;
+    margin-top: 10px; /* Adjust as needed */
   }
 
   .navbar-links.active {
     display: flex;
     transform: translateX(0);
+    gap: 30px; /* Add gap between the items */
   }
+
 
   .hamburger {
     display: flex;
+    margin-right: 20px; /* Add space from the right */
+  }
+  .button {
+    position: absolute;
+    bottom: 44px; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button */
   }
 }
 
 @media (min-width: 769px) {
   .navbar-links {
     display: flex;
+    gap: 20px; /* Add gap between the navbar items */
   }
 
   .hamburger {
