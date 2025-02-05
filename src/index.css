@@ -1,5 +1,5 @@
 body {
-  touch-action: manipulation; /* Disable pinch-to-zoom and other gestures */
+  touch-action: manipulation; 
 }
 
 .modal {
