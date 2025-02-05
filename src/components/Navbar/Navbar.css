@@ -155,7 +155,7 @@
   }
   .button {
     position: absolute;
-    bottom: 44px; /* Adjust this value as needed */
+    bottom: 55px; /* Adjust this value as needed */
     left: 50%;
     transform: translateX(-50%); /* Center the button */
   }
