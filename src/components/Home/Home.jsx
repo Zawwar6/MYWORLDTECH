@@ -185,7 +185,7 @@ const Home = () => {
           <h3>SEO & Social Media Marketing</h3>
           <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
           <Link to="/gallery">
-            <button className="cta-btn">Learn More</button>
+            <button className="cta-btn">View More</button>
           </Link>
         </motion.div>
       </div>
