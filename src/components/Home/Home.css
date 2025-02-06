@@ -908,124 +908,160 @@ p {
 }
 
 
+/* Main container style */
 .container {
-  max-width: 700px;
+  max-width: 100%;
   margin: auto;
-  padding: 40px;
-  border-radius: 10px;
- 
+  padding: 50px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
 }
 
+/* Title styling */
 .title {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-align: left;
-  color: #333;
+  color: #222;
 }
 
+/* Button group layout */
 .button-group {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 30px;
+  flex-wrap: wrap; /* Buttons will wrap to the next line if necessary */
+  gap: 75px;
+  margin-bottom: 40px;
+  justify-content: center;
 }
 
 .task-button {
-  border: 2px solid #333;
-  padding: 12px 25px;
-  border-radius: 25px;
+  flex: none;
+  border: 3px solid #222;
+  padding: 15px 30px;
+  border-radius: 30px;
   background: white;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
+  white-space: nowrap;
 }
 
-.task-button:hover {
-  background: #333;
+/* Hover and active button styles */
+.task-button:hover, .task-button.active {
+  background: #222;
   color: white;
 }
 
+/* Form container styling */
 .form-container {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
+  width: 100%;
 }
 
+/* Input group for each field */
 .input-group {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-.label {
-  color: #666;
-  font-size: 16px;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
+/* Styling for each input field */
 .input-field {
   border: none;
-  border-bottom: 2px solid #333;
-  padding: 8px;
+  border-bottom: 3px solid #222;
+  padding: 10px;
   outline: none;
-  font-size: 18px;
+  font-size: 20px;
   background: transparent;
+  width: 100%;
 }
 
-/* Budget Section Styling */
+/* Budget section title */
 .budget-title {
-  margin-top: 40px;
+  margin-top: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
 }
 
+/* Budget button group layout */
 .budget-group {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .budget-button {
-  border-color: #007bff;
-  color: #007bff;
+  border: 3px solid #000;
+  color: #000;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.budget-button:hover {
-  background: #007bff;
+/* Hover and active budget button styles */
+.budget-button:hover, .budget-button.active {
+  background: #222;
   color: white;
 }
 
-/* Project Details Section */
-.sub-title {
-  font-size: 24px;
+/* Submit button styling */
+.submit-button {
+  background: transparent;
+  color: #222;
+  border: 2px solid #222;
+  padding: 15px 30px;
+  font-size: 18px;
   font-weight: bold;
-  margin-top: 40px;
-}
-
-.separator {
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   width: 100%;
-  height: 2px;
-  background: #333;
-  margin-top: 10px;
-  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Responsive Design */
+/* Submit button hover effect */
+.submit-button:hover {
+  background: #222;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Submit button active effect */
+.submit-button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries for responsive design */
 @media (max-width: 768px) {
   .container {
-    padding: 20px;
+      padding: 30px;
   }
 
-  .task-button {
-    padding: 10px 20px;
-    font-size: 16px;
+  .button-group {
+      flex-wrap: wrap;
   }
 
-  .title,
-  .sub-title {
-    font-size: 22px;
+  .task-button, .budget-button {
+      padding: 12px 25px;
+      font-size: 18px;
+  }
+
+  .title, .budget-title {
+      font-size: 26px;
   }
 
   .input-field {
-    font-size: 16px;
+      font-size: 18px;
   }
 }
 

@@ -25,10 +25,9 @@ const Contact = () => {
         ))}
       </div>
       
-      <form className="form-container active">
+      <form className="form-container">
         {fields.map((field, index) => (
           <div key={index} className="input-group">
-            
             <input type="text" placeholder={field} className="input-field" />
           </div>
         ))}
@@ -39,7 +38,7 @@ const Contact = () => {
         {budget.map((amount, index) => (
           <button 
             key={index} 
-            className={`task-button budget-button ${activeBudget === amount ? "active" : ""}`}
+            className={`budget-button ${activeBudget === amount ? "active" : ""}`}
             onClick={() => setActiveBudget(amount)}
           >
             {amount}
@@ -47,7 +46,14 @@ const Contact = () => {
         ))}
       </div>
 
-      <button type="submit" className="submit-button">Submit</button>
+      {/* New Text and Divider */}
+      <div className="project-details">
+        <h3 className="project-text">Share details about your project</h3>
+      </div>
+
+      <div className="separator"></div>
+
+      {/* <button type="submit" className="submit-button">Submit</button> */}
     </div>
   );
 };
