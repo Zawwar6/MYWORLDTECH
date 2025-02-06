@@ -18,8 +18,8 @@ const Navbar = () => {
         <li><a href="/" className="navbar-link">Home</a></li>
         <li><a href="/about" className="navbar-link">About Us</a></li>
         <li><a href="/services" className="navbar-link">Services</a></li>
-        <li><a href="/contact" className="button">Contact</a></li> 
       </ul>
+        <li><a href="/contact" className="button">Contact</a></li> 
       <div className="hamburger" onClick={toggleMenu}>
         <div className={`line ${isMenuOpen ? 'active' : ''}`}></div>
         <div className={`line ${isMenuOpen ? 'active' : ''}`}></div>
