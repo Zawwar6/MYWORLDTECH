@@ -123,7 +123,7 @@ const Home = () => {
           <div><img src="/KIAA.jpg" alt="Brand 3" className="brand-logo" /></div>
           <div><img src="/Micro.jpg" alt="Brand 4" className="brand-logo" /></div>
           <div><img src="/awss.jpg" alt="Brand 5" className="brand-logo" /></div>
-          <div><img src="/Fpci.png" alt="Brand 4" className="brand-logo" /></div>
+          <div><img src="/fp.jpg" alt="Brand 4" className="brand-logo" /></div>
           {/* Add more logos as needed */}
         </Slider>
       </section>
