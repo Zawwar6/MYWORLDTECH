@@ -1,6 +1,6 @@
 .about-us {
   padding: 60px 20px;
-  background-color: linear-gradient( #ffffff, #ffffff); /* Charcoal grey and deep red */
+  /* background-color: linear-gradient( #ffffff, #ffffff);  */
   opacity: 0;
   animation: fadeInUp 1s forwards;
 }
@@ -20,8 +20,8 @@
   width: 100%;
   max-width: 500px;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2); /* Soft shadow for smooth depth */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);  */
   opacity: 0;
   transform: translateX(-50px);
   animation: slideInLeft 1s forwards;
@@ -40,7 +40,7 @@
 .about-us h2 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #ECF0F1; /* Bright and clean text color */
+  color: #000000; /* Bright and clean text color */
   font-weight: bolder;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* More pronounced shadow for extra depth */
 }
@@ -50,10 +50,12 @@
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 30px;
-  color: #BDC3C7; /* Light grey text for readability */
+  color: #1b1c1c; /* Light grey text for readability */
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow for better legibility */
 }
-
+.about-us-content span{
+  color: #090ced;
+}
 .cta-btn {
   background-color: #1F618D; 
   color: white;

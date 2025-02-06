@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa"; 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
   
@@ -102,6 +104,11 @@ const Home = () => {
        const [activeTask, setActiveTask] = useState(null);
       const [activeBudget, setActiveBudget] = useState(null);
 
+     useEffect(() => {
+         AOS.init({ duration: 1000, once: true }); // ✅ Ensure animations work smoothly
+         AOS.refresh(); // ✅ Refresh animations
+       }, []);
+
   return (
     <div className="home-container">
       <section className="hero">
@@ -130,14 +137,15 @@ const Home = () => {
       </section>
 
       <section className="about-us">
-        <div className="about-us-container">
-          <div className="about-us-image">
-            <img src="/AboutUs.jpg" alt="About Us" />
+        <div className="about-us-container" >
+          <div className="about-us-image" >
+            <img src="/AboutUs(1).png" alt="About Us" />
+
           </div>
-          <div className="about-us-content">
-            <h2>About Us</h2>
+          <div className="about-us-content" data-aos="fade-down-left">
+            <h2>Who We Are?</h2>
             <p>
-            At MyWorldTec, we’re not just a digital agency — we’re your creative partner. We specialize in crafting custom digital solutions that fuel business growth and spark innovation. Whether you’re a startup or an established enterprise, our expert team collaborates with you to turn your vision into reality, delivering results that matter. Lets build something extraordinary together and take your business to the next level.
+         <span> At MyWorldTec, we’re not just a digital agency — we’re your creative partner. We specialize in crafting custom digital solutions that fuel business growth and spark innovation.</span> <br /> <br /> Whether you’re a startup or an established enterprise, our expert team collaborates with you to turn your vision into reality, delivering results that matter. Lets build something extraordinary together and take your business to the next level.
             </p>
             <button className="cta-btn">View More</button>
           </div>

@@ -263,7 +263,6 @@ html, body {
 
 .about-us {
   padding: 60px 20px;
-  background: linear-gradient(135deg, #b8b3b3, #1c1b1b, #514f4f);
   opacity: 0;
   animation: fadeInUp 1s forwards;
   animation-delay: 0.5s;
@@ -282,6 +281,7 @@ html, body {
 
 /* Image Animation */
 .about-us-image img {
+  background: none;
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -304,10 +304,10 @@ html, body {
 }
 
 /* Heading Animation */
-.about-us h2 {
+.about-us-content h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: #000000;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   animation: floating 3s infinite ease-in-out alternate;
 }

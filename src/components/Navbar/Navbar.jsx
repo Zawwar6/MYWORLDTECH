@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src="/finalLogo.png" alt="Logo" className="logo" />
+        <Link to="/"> {/* Logo click karne pe Home page open hoga */}
+          <img src="/finalLogo.png" alt="MyWorldTec Logo" />
+        </Link>
       </div>
       <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <li><a href="/" className="navbar-link">Home</a></li>
