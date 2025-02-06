@@ -138,7 +138,7 @@ const Home = () => {
             <p>
             At MyWorldTec, we’re not just a digital agency — we’re your creative partner. We specialize in crafting custom digital solutions that fuel business growth and spark innovation. Whether you’re a startup or an established enterprise, our expert team collaborates with you to turn your vision into reality, delivering results that matter. Lets build something extraordinary together and take your business to the next level.
             </p>
-            <button className="cta-btn">Learn More</button>
+            <button className="cta-btn">View More</button>
           </div>
         </div>
       </section>
@@ -157,7 +157,7 @@ const Home = () => {
           <h3>Website Design & Development</h3>
           <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
           <Link to="/Gallery">
-            <button className="cta-btn">Learn More</button>
+            <button className="cta-btn">View More</button>
           </Link>
         </motion.div>
 
@@ -171,7 +171,7 @@ const Home = () => {
           <h3>2D Animation & Video Editing</h3>
           <p>Bring your ideas to life with stunning 2D animations and professional video editing that captivate your audience and boost your brand visibility.</p>
           <Link to="/gallery">
-            <button className="cta-btn">Learn More</button>
+            <button className="cta-btn">View More</button>
           </Link>
         </motion.div>
 
