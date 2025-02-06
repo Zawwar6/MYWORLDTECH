@@ -440,9 +440,14 @@ html, body {
   background-color: #2a2626;
 }
 
+.services h1{
+  color: rgb(126, 119, 119);
+}
+
+
 h1 {
   font-size: 36px;
-  color: #0a0606;
+  color: #626060;
   margin-bottom: 40px;
 }
 
@@ -553,6 +558,9 @@ h1:hover::before {
   text-align: center;
   padding: 50px;
   background-color: #f9f9f9; /* Slight background to make the content pop */
+}
+.our-work-container h1{
+  color: rgb(126, 119, 119);
 }
 .our-work-container h3 a {
   text-decoration: none;

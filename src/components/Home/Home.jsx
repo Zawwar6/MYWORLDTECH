@@ -351,7 +351,7 @@ const Home = () => {
       <form className="form-container">
         {fields.map((field, index) => (
           <div key={index} className="input-group">
-            <label className="label">{field}</label>
+            
             <input type="text" placeholder={field} className="input-field" />
           </div>
         ))}
