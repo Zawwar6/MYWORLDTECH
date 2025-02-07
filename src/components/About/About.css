@@ -50,11 +50,11 @@
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 30px;
-  color: #787878; /* Light grey text for readability */
+  color: #000000; /* Light grey text for readability */
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow for better legibility */
 }
 .about-us-content span{
-  color: #090ced;
+  color: #787878;
 }
 .cta-btn {
   background-color: #1F618D; 
