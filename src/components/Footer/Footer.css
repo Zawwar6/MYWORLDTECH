@@ -1,81 +1,156 @@
-/* Footer Styles */
 .footer {
-    background: #282829;
-    color: white;
+  background: linear-gradient(to right, #1f2937, #111827);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* BIG HEADING STYLING */
+.big-heading {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  letter-spacing: 5px;
+  transition: color 0.5s ease-in-out;
+}
+
+.big-heading:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Footer Content (Flexbox) */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;  /* Responsive behavior */
+}
+
+/* Left Side - Navigation Links */
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-nav a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+}
+
+/* Right Side - Social Icons */
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  font-size: 30px;
+  color: white;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.3) rotate(10deg);
+  color: #38bdf8;
+}
+
+/* Copyright */
+.footer p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Glowing Border Animation */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 200px;
+  height: 5px;
+  background: linear-gradient(90deg, #38bdf8, #06b6d4, #38bdf8);
+  transform: translateX(-50%);
+  animation: glowing 3s infinite linear;
+}
+
+@keyframes glowing {
+  0% {
+    left: 50%;
+    width: 200px;
+  }
+  50% {
+    left: 25%;
+    width: 250px;
+  }
+  100% {
+    left: 50%;
+    width: 200px;
+  }
+}
+
+/* 📌 RESPONSIVE DESIGN */
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .big-heading {
+    font-size: 60px;
+  }
+
+  .footer-content {
+    flex-direction: column;
     text-align: center;
-    padding: 20px 0;
-    font-size: 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Text Animation */
-  .footer p {
-    font-size: 1rem;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    opacity: 0;
-    animation: fadeIn 1.2s ease-in-out forwards;
-  }
-  
-  /* Social Icons */
-  .social-links {
-    display: flex;
-    justify-content: center;
     gap: 20px;
   }
-  
+
+  .footer-nav {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .big-heading {
+    font-size: 40px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+
   .social-icon {
-    color: white;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 25px;
   }
-  
-  .social-icon:hover {
-    transform: scale(1.2);
-    color: #7282df;
+
+  .footer p {
+    font-size: 14px;
   }
-  
-  /* Glowing Effect */
-  .footer::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, #7282df, #10235f);
-    bottom: 0;
-    left: 0;
-    animation: glowMove 3s infinite linear;
-  }
-  
-  /* Keyframes */
-  @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-  }
-  
-  @keyframes glowMove {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-  }
-  
-  /* Responsive Fixes */
-  @media (max-width: 480px) {
-    .footer p {
-        font-size: 0.9rem;
-    }
-    
-    .social-icon {
-        font-size: 1.2rem;
-    }
-  }
+}

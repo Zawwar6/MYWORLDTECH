@@ -1147,4 +1147,14 @@ p {
   }
 }
 
-
+textarea {
+  width: 100%;
+  max-width: 900px;
+  min-width: 250px;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical; /* Allows users to resize the height */
+}
