@@ -385,8 +385,9 @@ const Home = () => {
         ))}
       </div>
       <div className="project-details">
-        <h3 className="project-text">Share details about your project</h3><br />
-        <textarea name="" id="" rows={10} cols={180}></textarea>
+        <h3 className="project-text">Share details about your project</h3>
+        <br />
+        <textarea name="" id="" rows={20} cols={100}></textarea>
       </div>
 
       {/* <button type="submit" className="submit-button">Submit</button> */}

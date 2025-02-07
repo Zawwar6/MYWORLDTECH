@@ -22,10 +22,10 @@ const Navbar = () => {
         <li><a href="/about" className="navbar-link">About Us</a></li>
         <li><a href="/services" className="navbar-link">Services</a></li>
 
-      <li className="contact-button">
-        <a href="/contact" className="button">Contact</a>
-      </li>
       </ul>
+      <li className="contact-button">
+        <a href="/contact" className="button">Contact Us</a>
+      </li>
 
       <div className="hamburger" onClick={toggleMenu}>
         <div className={`line ${isMenuOpen ? "active" : ""}`}></div>

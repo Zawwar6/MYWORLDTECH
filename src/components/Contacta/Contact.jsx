@@ -48,12 +48,13 @@ const Contact = () => {
 
       {/* New Text and Divider */}
       <div className="project-details">
-        <h3 className="project-text">Share details about your project</h3><br />
-        <textarea name="" id="" rows={10} cols={180}></textarea>
+        <h3 className="project-text">Share details about your project</h3>
+        <br />
+        <textarea name="" id="" rows={10} cols={150}></textarea>
       </div>
 
 
-      <div className="separator"></div>
+      
 
       {/* <button type="submit" className="submit-button">Submit</button> */}
     </div>

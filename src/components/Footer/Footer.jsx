@@ -1,74 +1,56 @@
-import React, { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
-import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
+import React from "react";
+import { FaFacebookF, FaInstagram, FaTwitter, FaGoogle, FaLinkedin, FaFacebook } from "react-icons/fa";
 import "./Footer.css";
+import { motion } from "framer-motion";
 
 const Footer = () => {
-  const [showText, setShowText] = useState(false);
-  const footerRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setShowText(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (footerRef.current) {
-      observer.observe(footerRef.current);
-    }
-
-    return () => {
-      if (footerRef.current) {
-        observer.unobserve(footerRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <footer className="footer" ref={footerRef}>
-      {/* Big Animated Heading */}
-      <motion.h1
-        className="big-heading"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={showText ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        MyWorldTec
-      </motion.h1>
-
-      {/* Footer Content - Navigation & Social Icons */}
-      <div className="footer-content">
-        {/* Left Side: Navigation Links */}
-        <div className="footer-nav">
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </div>
-
-        {/* Right Side: Social Icons */}
-        <div className="social-links">
-          <a href="#linkedin" className="social-icon">
-            <FaLinkedin />
-          </a>
-          <a href="#facebook" className="social-icon">
-            <FaFacebook />
-          </a>
-          <a href="#instagram" className="social-icon">
-            <FaInstagram />
-          </a>
-          <a href="#twitter" className="social-icon">
-            <FaTwitter />
-          </a>
+    <footer className="footer"> 
+      <div className="container">
+      <motion.h1 
+          className="footer-heading"
+          initial={{ opacity: 0, y: 50, scale: 0.8 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          MYWORLDTEC
+        </motion.h1>
+        <br />
+        <div className="footer-grid">
+        <div className="footer-location">
+            <h5 className="footer-title">Our Location</h5>
+            <div className="location-wrapper">
+              <img src="/Usa.jpeg" alt="USA Map" className="location-image" />
+              <p className="location-text">US Branch</p>
+            </div>
+            <p className="footer-info">Address: abc</p> <br />
+          </div>
+          
+          <div className="footer-contacts">
+            <h5 className="footer-title">Contacts</h5>
+            <p className="footer-info">Email: <a href="support@gmail.com" className="footer-link">support@gmail.com</a></p>
+            <p className="footer-info">Phone: <a href="00000000000" className="footer-link">00000000000</a></p>
+          </div>
+          
+          <div className="footer-links">
+            <h5 className="footer-title">Quick Links</h5>
+            <ul className="footer-links-list"> 
+              <li><a href="#" className="footer-link">Home</a></li>
+              <li><a href="#" className="footer-link">About Us</a></li>
+              <li><a href="#" className="footer-link">Services</a></li>
+              <li><a href="#" className="footer-link">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      {/* Copyright */}
-      <p>&copy; 2024 MyWorldTec. All rights reserved.</p>
+      <div className="footer-social">
+        <a href="#" className="footer-social-link"><FaFacebook /></a>
+        <a href="#" className="footer-social-link"><FaInstagram /></a>
+        <a href="#" className="footer-social-link"><FaTwitter /></a>
+        <a href="#" className="footer-social-link"><FaLinkedin /></a>
+      </div> <br />
+      <p className="footer-rights">© 2022 MyWorldTec. All Rights Reserved.</p>
     </footer>
   );
 };

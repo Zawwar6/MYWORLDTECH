@@ -1154,7 +1154,14 @@ textarea {
   height: 150px;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: vertical; /* Allows users to resize the height */
+  border: none; /* Border remove */
+  border-bottom: 2px solid #ccc; /* Sirf neeche line */
+  border-radius: 0; /* Extra styling remove */
+  resize: vertical; /* Sirf neeche resize allow */
+  outline: none; /* Focus pe border hatane ke liye */
+  background: transparent; /* White background remove */
+  color: #1c1a1a; /* Text ko readable banane ke liye */
 }
+
+
+
