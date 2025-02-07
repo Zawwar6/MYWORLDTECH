@@ -42,7 +42,7 @@
   margin-bottom: 20px;
   color: #000000; /* Bright and clean text color */
   font-weight: bolder;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* More pronounced shadow for extra depth */
+  /* text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); */
 }
 
 .about-us p {
@@ -50,7 +50,7 @@
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 30px;
-  color: #1b1c1c; /* Light grey text for readability */
+  color: #787878; /* Light grey text for readability */
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow for better legibility */
 }
 .about-us-content span{

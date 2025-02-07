@@ -103,6 +103,13 @@ const Home = () => {
      const budget = ['$2000-$5000' , '$5000-$10000' , 'more than $10000']
        const [activeTask, setActiveTask] = useState(null);
       const [activeBudget, setActiveBudget] = useState(null);
+      const toggleTask = (task) => {
+        setActiveTasks((prevTasks) =>
+          prevTasks.includes(task)
+            ? prevTasks.filter((t) => t !== task)
+            : [...prevTasks, task]
+        );
+      };
 
      useEffect(() => {
          AOS.init({ duration: 1000, once: true }); // ✅ Ensure animations work smoothly
@@ -389,8 +396,6 @@ const Home = () => {
         <br />
         <textarea name="" id="" rows={20} cols={100}></textarea>
       </div>
-
-      {/* <button type="submit" className="submit-button">Submit</button> */}
     </div>
     </div>
     
