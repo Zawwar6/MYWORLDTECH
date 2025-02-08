@@ -346,10 +346,6 @@ const Home = () => {
     ))}
   </div>
 </section>
-
-
-
-
       {/* Call to Action Section */}
       <section className="cta-section">
         <h2>Ready to Start Your Project?</h2>
