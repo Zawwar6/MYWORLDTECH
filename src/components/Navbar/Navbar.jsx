@@ -23,9 +23,13 @@ const Navbar = () => {
         <li><a href="/services" className="navbar-link">Services</a></li>
 
       </ul>
-      <li className="contact-button">
-        <a href="/contact" className="button">Contact Us</a>
-      </li>
+      <button class="btn-17">
+  <span class="text-container">
+    <span class="text">
+      <a href="/contact">Contact Us</a>
+      </span>
+  </span>
+</button>
 
       <div className="hamburger" onClick={toggleMenu}>
         <div className={`line ${isMenuOpen ? "active" : ""}`}></div>

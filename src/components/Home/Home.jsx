@@ -97,25 +97,25 @@ const Home = () => {
          }
        };
      }, []);
-
-     const tasks = ['Branding', 'Photography', 'Social Media', 'Videography', 'UI/UX'];
-     const fields = ['Name', 'Email', 'Company name', 'Your Designation', 'Phone Number'];
-     const budget = ['$2000-$5000' , '$5000-$10000' , 'more than $10000']
-       const [activeTask, setActiveTask] = useState(null);
-      const [activeBudget, setActiveBudget] = useState(null);
-      const toggleTask = (task) => {
-        setActiveTasks((prevTasks) =>
-          prevTasks.includes(task)
-            ? prevTasks.filter((t) => t !== task)
-            : [...prevTasks, task]
-        );
-      };
-
+    
      useEffect(() => {
          AOS.init({ duration: 1000, once: true }); // ✅ Ensure animations work smoothly
          AOS.refresh(); // ✅ Refresh animations
        }, []);
-
+       const tasks = ["Branding", "Photography", "Social Media", "Videography", "UI/UX"];
+         const fields = ["Name", "Email", "Company name", "Your Designation", "Phone Number"];
+         const budget = ["$2000-$5000", "$5000-$10000", "more than $10000"];
+       
+         const [activeTasks, setActiveTasks] = useState([]);
+         const [activeBudget, setActiveBudget] = useState(null);
+       
+         const toggleTask = (task) => {
+           setActiveTasks((prevTasks) =>
+             prevTasks.includes(task)
+               ? prevTasks.filter((t) => t !== task)
+               : [...prevTasks, task]
+           );
+         };
   return (
     <div className="home-container">
       <section className="hero">
@@ -346,6 +346,10 @@ const Home = () => {
     ))}
   </div>
 </section>
+
+
+
+
       {/* Call to Action Section */}
       <section className="cta-section">
         <h2>Ready to Start Your Project?</h2>
@@ -359,8 +363,8 @@ const Home = () => {
         {tasks.map((task, index) => (
           <button 
             key={index} 
-            className={`task-button ${activeTask === task ? "active" : ""}`}
-            onClick={() => setActiveTask(task)}
+            className={`task-button ${activeTasks.includes(task) ? "active" : ""}`}
+            onClick={() => toggleTask(task)}
           >
             {task}
           </button>
@@ -387,10 +391,11 @@ const Home = () => {
           </button>
         ))}
       </div>
+
       <div className="project-details">
         <h3 className="project-text">Share details about your project</h3>
         <br />
-        <textarea name="" id="" rows={20} cols={100}></textarea>
+        <textarea name="" id="" rows={10} cols={150}></textarea>
       </div>
     </div>
     </div>
