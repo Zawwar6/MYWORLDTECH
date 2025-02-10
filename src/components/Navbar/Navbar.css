@@ -19,30 +19,67 @@
   height: auto;
 }
 
-/* Navbar Links */
 .navbar-links {
-  display: flex;
-  gap: 25px;
   list-style: none;
-  padding-left: 0;
-  justify-content: center;
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition: all 0.3s ease-in-out;
 }
 
+/* Individual Navbar Link Styling */
 .navbar-link {
-  padding: 0px 10px;
-  color: #000000;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 18px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
+  color: #222;
+  padding: 12px 18px;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
 }
 
+/* 3D Floating Effect & Color Change on Hover */
 .navbar-link:hover {
-  color: #fbf9f9;
+  color: #000000;
+  transform: translateY(-3px) rotateX(20deg) rotateY(5deg);
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.3);
 }
+
+/* Animated Underline Effect */
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  transition: width 0.4s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* Click Animation (Bounce Effect) */
+.navbar-link:active {
+  animation: bounce 0.3s ease-in-out;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(10px); }
+  30% { transform: translateY(-10px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Neon Glow Effect on Hover */
+.navbar-link:hover {
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+}
+
 
 /* Contact Us Button Styling */
 .button {
