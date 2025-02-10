@@ -5,7 +5,7 @@ import { useEffect, useState ,useRef } from "react";
 import './Home.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa"; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -116,6 +116,12 @@ const Home = () => {
                : [...prevTasks, task]
            );
          };
+         const navigate = useNavigate(); // ✅ Correct way to use navigation
+        
+           const handleNavigation = (path) => {
+             navigate(path);
+             window.scrollTo(0, 0); // Scroll to top
+           };
   return (
     <div className="home-container">
       <section className="hero">
@@ -130,15 +136,17 @@ const Home = () => {
 
       {/* Brand Logo Slider Section */}
       <section className="brand-slider-section">
-        <h2 className="brand-slider-title">Our Trusted Clients</h2>
+        <h2 className="brand-slider-title">Our Tech Stack</h2>
         <br /><br /><br />
         <Slider {...sliderSettings}>
-          <div><img src="/oc.jpg" alt="Brand 1" className="brand-logo" /></div>
-          <div><img src="/ABAD.png" alt="Brand 2" className="brand-logo" /></div>
-          <div><img src="/KIAA.jpg" alt="Brand 3" className="brand-logo" /></div>
-          <div><img src="/Micro.jpg" alt="Brand 4" className="brand-logo" /></div>
-          <div><img src="/awss.jpg" alt="Brand 5" className="brand-logo" /></div>
-          <div><img src="/fp.jpg" alt="Brand 4" className="brand-logo" /></div>
+          <div><img src="/React.png" alt="Brand 1" className="brand-logo" /></div>
+          <div><img src="/Amazon.png" alt="Brand 2" className="brand-logo" /></div>
+          <div><img src="/Microsoft.png" alt="Brand 4" className="brand-logo" /></div>
+          <div><img src="/aws.png" alt="Brand 5" className="brand-logo" /></div>
+          <div><img src="/amazon1.png" alt="Brand 4" className="brand-logo" /></div>
+          <div><img src="/php.png" alt="Brand 4" className="brand-logo" /></div>
+          <div><img src="/asp.net.png" alt="Brand 4" className="brand-logo" /></div>
+          <div><img src="/MongoDB.jpg" alt="Brand 4" className="brand-logo" /></div>
           {/* Add more logos as needed */}
         </Slider>
       </section>
@@ -160,53 +168,28 @@ const Home = () => {
       </section>
       <br />
         
-      <section className="services">
-      <h1>Our Services</h1>
-      <div className="service-cards">
-        <motion.div
-          className="service-card"
-          whileHover={{ scale: 1.1, rotateY: 10 }}
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
-        >
-          <h3>Website Design & Development</h3>
-          <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
-          <Link to="/Gallery">
-            <button className="cta-btn">View More</button>
-          </Link>
-        </motion.div>
-
-        <motion.div
-          className="service-card"
-          whileHover={{ scale: 1.1, rotateY: 10 }}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-        >
-          <h3>2D Animation & Video Editing</h3>
-          <p>Bring your ideas to life with stunning 2D animations and professional video editing that captivate your audience and boost your brand visibility.</p>
-          <Link to="/gallery">
-            <button className="cta-btn">View More</button>
-          </Link>
-        </motion.div>
-
-        <motion.div
-          className="service-card"
-          whileHover={{ scale: 1.1, rotateY: 10 }}
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
-        >
-          <h3>SEO & Social Media Marketing</h3>
-          <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
-          <Link to="/gallery">
-            <button className="cta-btn">View More</button>
-          </Link>
-        </motion.div>
+        <div>
+        <section className="services">
+          <h1>Our Services</h1>
+          <div className="service-cards">
+            <div className="service-card">
+              <h3>Website Design & Development</h3>
+              <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
+              <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+            </div>
+            <div className="service-card">
+              <h3>2D Animation & Video Editing</h3>
+              <p>Bring your ideas to life with stunning 2D animations and professional video editing that captivate your audience and boost your brand visibility.</p>
+              <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+            </div>
+            <div className="service-card">
+              <h3>SEO & Social Media Marketing</h3>
+              <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
+              <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-
       {/* Portfolio Section */}
 
       <div className="our-work-container">
