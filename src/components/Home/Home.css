@@ -21,7 +21,7 @@ html, body {
   color: #ffffff;
   position: relative;
   animation: fadeInUp 1.5s ease-out;
-  opacity: 0.9; /* Slightly reduced opacity for a clearer image */
+  opacity: 0.9; 
 }
 
 .hero::before {

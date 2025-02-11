@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaGoogle, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaGoogle, FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
 import "./Footer.css";
 import { motion } from "framer-motion";
 
@@ -24,31 +24,31 @@ const Footer = () => {
               <img src="/Usa.jpeg" alt="USA Map" className="location-image" />
               <p className="location-text">US Branch</p>
             </div>
-            <p className="footer-info">Address: abc</p> <br />
+            <p className="footer-info">Located: Washington, D.C.</p> <br />
           </div>
           
           <div className="footer-contacts">
             <h5 className="footer-title">Contacts</h5>
-            <p className="footer-info">Email: <a href="support@gmail.com" className="footer-link">support@gmail.com</a></p>
+            <p className="footer-info">Email: <a href="support@myworldtec.com" className="footer-link">support@myworldtec.com</a></p>
             <p className="footer-info">Phone: <a href="00000000000" className="footer-link">00000000000</a></p>
           </div>
           
           <div className="footer-links">
             <h5 className="footer-title">Quick Links</h5>
             <ul className="footer-links-list"> 
-              <li><a href="#" className="footer-link">Home</a></li>
-              <li><a href="#" className="footer-link">About Us</a></li>
-              <li><a href="#" className="footer-link">Services</a></li>
-              <li><a href="#" className="footer-link">Contact Us</a></li>
+              <li><a href="/" className="footer-link">Home</a></li>
+              <li><a href="/about" className="footer-link">About Us</a></li>
+              <li><a href="/services" className="footer-link">Services</a></li>
+              <li><a href="/contact" className="footer-link">Contact Us</a></li>
             </ul>
           </div>
         </div>
       </div>
       <div className="footer-social">
-        <a href="#" className="footer-social-link"><FaFacebook /></a>
-        <a href="#" className="footer-social-link"><FaInstagram /></a>
-        <a href="#" className="footer-social-link"><FaTwitter /></a>
-        <a href="#" className="footer-social-link"><FaLinkedin /></a>
+        <a href="https://www.facebook.com/share/1A9FswAqCy/" target="_blank" className="footer-social-link"><FaFacebook /></a>
+        <a href="https://www.instagram.com/myworldtec786?igsh=MTAzYjNyN2tnY3Zv" target="_blank" className="footer-social-link"><FaInstagram /></a>
+        <a href="https://www.youtube.com/@MyWorldTech-j9m" target="_blank" className="footer-social-link"><FaYoutube /></a>
+        <a href="https://www.linkedin.com/company/myworldtec/posts/?feedView=all" target="_blank" className="footer-social-link"><FaLinkedin /></a>
       </div> <br />
       <p className="footer-rights">© 2022 MyWorldTec. All Rights Reserved.</p>
     </footer>
