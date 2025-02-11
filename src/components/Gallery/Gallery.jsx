@@ -6,9 +6,9 @@ const Gallery = () => {
   const [activeTab, setActiveTab] = useState('Website Design & Development');
 
   const services = {
-    "Website Design & Development": "Creating responsive websites that engage and drive results with seamless user experiences.",
-    "2D Animation & Video Editing": "Bring your ideas to life with stunning 2D animations and professional video editing that captivate your audience and boost your brand visibility.",
-    "SEO & Social Media Marketing": "We build strong brands with impactful design, social media presence, and targeted SEO."
+    "Website Design & Development": "Crafting highly responsive and visually stunning websites that not only captivate users but also drive meaningful engagement and conversions.  With a focus on seamless user experiences, intuitive navigation, and modern design principles, we ensure that every website we create is optimized for performance, accessibility, and business growth. Whether you're looking to enhance brand visibility, boost customer interaction, or increase sales, our expertly designed websites are tailored to meet your specific goals.",
+    "2D Animation & Video Editing": "Transform your vision into reality with captivating 2D animations and high-quality video editing that leave a lasting impact. Our expertly crafted animations and seamless edits are designed to engage your audience, enhance storytelling, and elevate your brand’s visibility. Whether you need eye-catching motion graphics, dynamic explainer videos, or polished cinematic edits, we bring creativity and precision to every project, ensuring your content stands out in the digital landscape.",
+    "SEO & Social Media Marketing": "We create powerful and memorable brands through strategic design, a compelling social media presence, and data-driven SEO. Our approach ensures that your brand not only stands out but also connects with the right audience, driving engagement and long-term growth. From visually stunning designs to expertly crafted digital strategies, we help you establish a strong market presence and achieve lasting success."
   };
 
   const videoCards = {
