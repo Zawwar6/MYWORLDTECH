@@ -10,13 +10,14 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 50px auto;
   opacity: 0;
   animation: fadeInUp 1s forwards;
   animation-delay: 0.3s;
 }
 
 .about-us-image img {
+  margin: 10px auto;
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -51,7 +52,6 @@
   line-height: 1.7;
   margin-bottom: 30px;
   color: #000000; /* Light grey text for readability */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow for better legibility */
 }
 .about-us-content span{
   color: #787878;
