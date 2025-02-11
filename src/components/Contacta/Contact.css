@@ -183,13 +183,13 @@ textarea {
   width: 100%;
   max-width: 900px;
   min-width: 250px;
-  height: 150px;
+  height: 50px;
   padding: 10px;
   font-size: 16px;
   border: none; /* Border remove */
   border-bottom: 2px solid #ccc; /* Sirf neeche line */
   border-radius: 0; /* Extra styling remove */
-  resize: vertical; /* Sirf neeche resize allow */
+  resize: none; /* Sirf neeche resize allow */
   outline: none; /* Focus pe border hatane ke liye */
   background: transparent; /* White background remove */
   color: #1c1a1a; /* Text ko readable banane ke liye */

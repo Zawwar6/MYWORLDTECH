@@ -172,7 +172,7 @@ html, body {
   background: linear-gradient(90deg, #ff6f61, #ff0080);
   transform: scaleX(0);
   transform-origin: bottom right;
-  animation: scaleLine 1s ease-out forwards;
+  animation: scaleLine 0s ease-out forwards;
 }
 
 .brand-slider-title::after {
