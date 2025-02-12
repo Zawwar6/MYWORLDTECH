@@ -11,7 +11,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Home = () => {
-  
+  // const handleSubmit = () => {
+  //   console.log("Hello, how are you?");
+  // };
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -98,10 +101,7 @@ const Home = () => {
        };
      }, []);
     
-     useEffect(() => {
-         AOS.init({ duration: 1000, once: true }); // ✅ Ensure animations work smoothly
-         AOS.refresh(); // ✅ Refresh animations
-       }, []);
+     
        const tasks = ["Branding", "Photography", "Social Media", "Videography", "UI/UX"];
          const fields = ["Name", "Email", "Company name", "Your Designation", "Phone Number"];
          const budget = ["$2000-$5000", "$5000-$10000", "more than $10000"];
@@ -117,18 +117,13 @@ const Home = () => {
            );
          };
        const navigate = useNavigate(); 
-       
-        
          const handleNavigation = (path) => {
            navigate(path);
            window.scrollTo(0, 0);
           
          };
-         const handleNaviigation = () => {
-          navigate('/our-team'); // ✅ Navigate to Our Team page
-          window.scrollTo(0, 0); // ✅ Ensure it starts from the top
-        };
-      
+       
+       
 
          
   return (
@@ -160,45 +155,50 @@ const Home = () => {
         </Slider>
       </section>
 
+      <div>
       <section className="about-us">
-        <div className="about-us-container" >
+        <div className="about-us-container">
           <div className="about-us-image" >
-            <img src="/AboutUs(1).png" alt="About Us" />
-
+            <img src="/abb.jpg" alt="About Us" />
           </div>
-          <div className="about-us-content" data-aos="fade-down-left">
+          <div className="about-us-content">
             <h2>Who We Are?</h2>
             <p>
-         <span> At MyWorldTec, we’re not just a digital agency — we’re your creative partner. We specialize in crafting custom digital solutions that fuel business growth and spark innovation.</span> <br /> <br /> Whether you’re a startup or an established enterprise, our expert team collaborates with you to turn your vision into reality, delivering results that matter. Lets build something extraordinary together and take your business to the next level.
+              <span>
+                At MyWorldTec, we’re not just a digital agency — we’re your creative partner. We specialize in crafting custom digital solutions that fuel business growth and spark innovation.
+              </span> 
+              <br /><br /> 
+              Whether you’re a startup or an established enterprise, our expert team collaborates with you to turn your vision into reality, delivering results that matter. Let's build something extraordinary together and take your business to the next level.
             </p>
-            <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
-          </div>
-        </div>
-      </section>
-      <br />
-        
-      <div>
-      <section className="services">
-        <h1>Our Services</h1>
-        <div className="service-cards">
-          <div className="service-card">
-            <h3>Website Design & Development</h3>
-            <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
-            <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
-          </div>
-          <div className="service-card">
-            <h3>2D Animation & Video Editing</h3>
-            <p>Bring your ideas to life with stunning 2D animations and professional video editing that captivate your audience and boost your brand visibility.</p>
-            <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
-          </div>
-          <div className="service-card">
-            <h3>SEO & Social Media Marketing</h3>
-            <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
-            <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+            <button className="cta-btn" onClick={() => handleNavigation('/our-team')}>View More</button>
           </div>
         </div>
       </section>
     </div>
+      <br />
+        
+      <div>
+  <section className="services">
+    <h1>Our Services</h1>
+    <div className="service-cards">
+      <div className="service-card">
+        <img src="/Web.png" alt="Website Design" className="service-icon"/>
+        <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
+        <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+      </div>
+      <div className="service-card">
+        <img src="/2DV.png" alt="2D Animation" className="service-icon"/>
+        <p>Bring your ideas to life with stunning 2D animations and professional video editing</p>
+        <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+      </div>
+      <div className="service-card">
+        <img src="/Soe.png" alt="SEO & Marketing" className="service-icon"/>
+        <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
+        <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+      </div>
+    </div>
+  </section>
+</div>
       {/* Portfolio Section */}
 
       <div className="our-work-container">

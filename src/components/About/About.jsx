@@ -23,7 +23,7 @@ const About = () => {
       <section className="about-us">
         <div className="about-us-container">
           <div className="about-us-image" data-aos="fade-down-right">
-            <img src="/AboutUs(1).png" alt="About Us" />
+            <img src="/abb.jpg" alt="About Us" />
           </div>
           <div className="about-us-content" data-aos="fade-down-left">
             <h2>Who We Are?</h2>
