@@ -320,6 +320,9 @@ html, body {
   color: #ddd;
   animation: floating 3s infinite ease-in-out alternate;
 }
+.cta-btn{
+  cursor: pointer;
+}
 
 /* Keyframes for Slide In */
 @keyframes slideInLeft {

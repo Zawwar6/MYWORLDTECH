@@ -6,7 +6,7 @@ import './Home.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa"; 
+import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa"; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -116,19 +116,28 @@ const Home = () => {
                : [...prevTasks, task]
            );
          };
-         const navigate = useNavigate(); // ✅ Correct way to use navigation
+       const navigate = useNavigate(); 
+       
         
-           const handleNavigation = (path) => {
-             navigate(path);
-             window.scrollTo(0, 0); // Scroll to top
-           };
+         const handleNavigation = (path) => {
+           navigate(path);
+           window.scrollTo(0, 0);
+          
+         };
+         const handleNaviigation = () => {
+          navigate('/our-team'); // ✅ Navigate to Our Team page
+          window.scrollTo(0, 0); // ✅ Ensure it starts from the top
+        };
+      
+
+         
   return (
     <div className="home-container">
       <section className="hero">
         <div className="hero-content">
           <h1><b>MyWorldTec</b> - Digital Solutions, Video Editing, Animation & Web Development</h1>
           <p><b>MyWorldTec</b> provides professional video editing, 2D/3D animation, web design & development, <br /> SEO, SMM, and SMO services. <br /><br /> Get top-notch tech solutions for your business.</p>
-          <button className="cta-btn">Get Started</button>
+          <button className="cta-btn" onClick={() => navigate('/contact')}>Get Started</button>
         </div>
       </section>
 
@@ -162,34 +171,34 @@ const Home = () => {
             <p>
          <span> At MyWorldTec, we’re not just a digital agency — we’re your creative partner. We specialize in crafting custom digital solutions that fuel business growth and spark innovation.</span> <br /> <br /> Whether you’re a startup or an established enterprise, our expert team collaborates with you to turn your vision into reality, delivering results that matter. Lets build something extraordinary together and take your business to the next level.
             </p>
-            <button className="cta-btn">View More</button>
+            <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
           </div>
         </div>
       </section>
       <br />
         
-        <div>
-        <section className="services">
-          <h1>Our Services</h1>
-          <div className="service-cards">
-            <div className="service-card">
-              <h3>Website Design & Development</h3>
-              <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
-              <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
-            </div>
-            <div className="service-card">
-              <h3>2D Animation & Video Editing</h3>
-              <p>Bring your ideas to life with stunning 2D animations and professional video editing that captivate your audience and boost your brand visibility.</p>
-              <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
-            </div>
-            <div className="service-card">
-              <h3>SEO & Social Media Marketing</h3>
-              <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
-              <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
-            </div>
+      <div>
+      <section className="services">
+        <h1>Our Services</h1>
+        <div className="service-cards">
+          <div className="service-card">
+            <h3>Website Design & Development</h3>
+            <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
+            <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
           </div>
-        </section>
-      </div>
+          <div className="service-card">
+            <h3>2D Animation & Video Editing</h3>
+            <p>Bring your ideas to life with stunning 2D animations and professional video editing that captivate your audience and boost your brand visibility.</p>
+            <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+          </div>
+          <div className="service-card">
+            <h3>SEO & Social Media Marketing</h3>
+            <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
+            <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+          </div>
+        </div>
+      </section>
+    </div>
       {/* Portfolio Section */}
 
       <div className="our-work-container">

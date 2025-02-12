@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Gallery.css';
 import { motion } from 'framer-motion';
+import Footer from '../Footer/Footer';
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState('Website Design & Development');
@@ -32,6 +33,9 @@ const Gallery = () => {
     ]
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Jab Gallery page load hoga, tab scroll top pe chala jayega
+  }, []);
   
 
   return (
@@ -72,6 +76,7 @@ const Gallery = () => {
 ))}
         </div>
       </section>
+     
     </div>
   );
 };

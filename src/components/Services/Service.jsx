@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Service.css';
+import Footer from '../Footer/Footer';
 
 const Service = () => {
   const navigate = useNavigate(); // ✅ Correct way to use navigation
@@ -33,6 +34,7 @@ const Service = () => {
           </div>
         </div>
       </section>
+     
     </div>
   );
 };

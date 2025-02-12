@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
+import Footer from "../Footer/Footer";
 
 const Contact = () => {
   const tasks = ["Branding", "Photography", "Social Media", "Videography", "UI/UX"];
@@ -59,6 +60,7 @@ const Contact = () => {
         <br />
         <textarea name="" id="" rows={10} cols={150}></textarea>
       </div>
+      
     </div>
   );
 };

@@ -1,7 +1,9 @@
+
 body {
   touch-action: manipulation; 
   
 }
+
 
 .modal {
     position: fixed;

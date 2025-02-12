@@ -1,13 +1,22 @@
-import React, { useEffect } from 'react';  // ✅ Import useEffect
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ Import useNavigate
 import './About.css';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // ✅ Import AOS CSS
+import 'aos/dist/aos.css';
 
 const About = () => {
+  const navigate = useNavigate(); // ✅ Navigation hook
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true }); // ✅ Ensure animations work smoothly
     AOS.refresh(); // ✅ Refresh animations
   }, []);
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+   
+  };
 
   return (
     <div>
@@ -16,7 +25,7 @@ const About = () => {
           <div className="about-us-image" data-aos="fade-down-right">
             <img src="/AboutUs(1).png" alt="About Us" />
           </div>
-          <div className="about-us-content" data-aos="fade-down-left"> {/* ✅ Apply AOS to content too */}
+          <div className="about-us-content" data-aos="fade-down-left">
             <h2>Who We Are?</h2>
             <p>
               <span>
@@ -25,7 +34,7 @@ const About = () => {
               <br /><br /> 
               Whether you’re a startup or an established enterprise, our expert team collaborates with you to turn your vision into reality, delivering results that matter. Let's build something extraordinary together and take your business to the next level.
             </p>
-            <button className="cta-btn">Learn More</button>
+            <button className="cta-btn" onClick={() => handleNavigation('/our-team')}>View More</button>
           </div>
         </div>
       </section>
