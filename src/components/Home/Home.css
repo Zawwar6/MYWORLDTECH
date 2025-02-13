@@ -152,7 +152,8 @@ html, body {
 .brand-slider-title {
   font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -361,7 +362,7 @@ html, body {
 .cta-btn {
   color: #3b2b2b;
   padding: 15px 30px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   border-radius: 50px;
   cursor: pointer;

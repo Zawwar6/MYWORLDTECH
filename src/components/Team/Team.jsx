@@ -1,70 +1,25 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
-import "./Team.css"; // CSS file import
+import "./Team.css"; // External CSS file
 
-const teamMembers = [
-  {
-    name: "John Doe",
-    role: "CEO & Founder",
-    image: "https://via.placeholder.com/150",
-    linkedin: "#",
-    twitter: "#",
-    github: "#",
-  },
-  {
-    name: "Jane Smith",
-    role: "Lead Designer",
-    image: "https://via.placeholder.com/150",
-    linkedin: "#",
-    twitter: "#",
-    github: "#",
-  },
-  {
-    name: "Alex Brown",
-    role: "Senior Developer",
-    image: "https://via.placeholder.com/150",
-    linkedin: "#",
-    twitter: "#",
-    github: "#",
-  },
-];
-
-const MeetOurTeam = () => {
+const Team = () => {
   return (
-    <div className="team-container">
-      <h2 className="team-heading">Meet Our Team</h2>
-      <p className="team-subheading">
-        A team of passionate and skilled professionals driving innovation.
-      </p>
-
-      <div className="team-grid">
-        {teamMembers.map((member, index) => (
-          <motion.div
-            key={index}
-            className="team-card"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <img src={member.image} alt={member.name} className="team-image" />
-            <h3 className="team-name">{member.name}</h3>
-            <p className="team-role">{member.role}</p>
-            <div className="team-icons">
-              <a href={member.linkedin} target="_blank" rel="noreferrer">
-                <FaLinkedin className="icon linkedin" />
-              </a>
-              <a href={member.twitter} target="_blank" rel="noreferrer">
-                <FaTwitter className="icon twitter" />
-              </a>
-              <a href={member.github} target="_blank" rel="noreferrer">
-                <FaGithub className="icon github" />
-              </a>
-            </div>
-          </motion.div>
-        ))}
+    <section className="meet-our-team">
+      <div className="team-content">
+        <h2>Meet Our Team – The Minds Behind MyWorldTec</h2> <br />
+        <p>
+        At MyWorldTec, we are more than just a team—we are a powerhouse of innovation, creativity, and strategic brilliance. Every project we undertake is fueled by a fusion of cutting-edge technology, artistic vision, and data-driven marketing expertise. From crafting immersive web experiences to revolutionizing digital branding and animation, we don’t just build projects—we shape the future. Our commitment isn’t just to excellence; it’s to redefining possibilities. Let’s transform ideas into digital masterpieces, together.
+        </p>
       </div>
-    </div>
+      <div className="team-images">
+        <div className="image-grid">
+          <img src="/image1.png" alt="Team 1" />
+          <img src="/image2.png" alt="Team 2" />
+          <img src="/image3.png" alt="Team 3" />
+          <img src="/image4.png" alt="Team 4" />
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default MeetOurTeam;
+export default Team;

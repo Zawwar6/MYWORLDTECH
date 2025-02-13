@@ -81,7 +81,7 @@
   border-radius: 30px; /* Rounded edges for a modern look */
   color: white;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase; /* Caps for modern appeal */
   letter-spacing: 1px;
   transition: background-color 0.3s ease, transform 0.3s ease;
