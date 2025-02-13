@@ -41,7 +41,7 @@ const Gallery = () => {
   return (
     <div>
       <section className="services">
-        <h1>Our Work Gallery</h1>
+        <h2>Our Work Gallery</h2><br />
         <div className="service-tabs">
           {Object.keys(services).map((service) => (
             <button
@@ -54,7 +54,7 @@ const Gallery = () => {
           ))}
         </div>
         <div className="service-content">
-          <h1>{activeTab}</h1>
+          <h2>{activeTab}</h2>
           <p>{services[activeTab]}</p>
         </div>
 
