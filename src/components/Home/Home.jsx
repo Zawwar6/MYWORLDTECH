@@ -179,7 +179,7 @@ const Home = () => {
         
       <div>
   <section className="services">
-    <h1>Our Services</h1>
+    <h2>Our Services</h2>
     <div className="service-cards">
       <div className="service-card">
         <img src="/Web.png" alt="Website Design" className="service-icon"/>
@@ -202,7 +202,7 @@ const Home = () => {
       {/* Portfolio Section */}
 
       <div className="our-work-container">
-      <h1>Our Work</h1>
+      <h2>Our Work</h2> <br />
       <p>Explore our recent projects and see how we can help your business grow!</p>
 
       <div className="projects">

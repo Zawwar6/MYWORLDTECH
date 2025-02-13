@@ -1,11 +1,12 @@
 import React from "react";
+import './Portfolio.css'
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const OurWork = () => {
   return (
     <div className="our-work-container">
-      <h1>Our Work</h1>
+      <h2>Our Work</h2>
       <p>Explore our recent projects and see how we can help your business grow!</p>
 
       <div className="projects">

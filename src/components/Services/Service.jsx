@@ -15,7 +15,7 @@ const Service = () => {
   return (
     <div>
   <section className="services">
-    <h1>Our Services</h1>
+    <h2>Our Services</h2>
     <div className="service-cards">
       <div className="service-card">
         <img src="/Web.png" alt="Website Design" className="service-icon"/>

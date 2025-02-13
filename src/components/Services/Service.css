@@ -5,9 +5,10 @@
   color: #000000;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-.services h1{
-  color: rgb(126, 119, 119);
-  top: 10px;
+.services h2{
+  color: #333333; 
+  top: 20px;
+  font-size: 1.1 rem;
 }
 
 .service-cards {

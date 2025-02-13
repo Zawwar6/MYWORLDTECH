@@ -444,16 +444,15 @@ html, body {
   background-color: #2a2626;
 }
 
-.services h1{
-  color: rgb(126, 119, 119);
+.services h2{
+  text-transform: uppercase;
+  font-size: 46px;
+  letter-spacing: 3px;
+  color: #333333; 
 }
 
 
-h1 {
-  font-size: 36px;
-  color: #626060;
-  margin-bottom: 40px;
-}
+
 
 .service-cards {
   display: flex;
@@ -483,53 +482,6 @@ h1 {
   font-size: 16px;
   color: #555;
   margin-bottom: 20px;
-}
-
-/* .cta-btn {
-  background-color: #0072ff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: #005bb5; 
-} */
-
-
-h1 {
-  text-align: center;
-  font-size: 4rem; /* Big Font Size */
-  font-family: 'Arial', sans-serif;
-  color: #232020;
-  text-transform: uppercase; /* Capitalize the Text */
-  letter-spacing: 3px;
-  position: relative;
-  transition: all 0.3s ease; /* Smooth Transitions */
-}
-
-/* Papu Shadow Effect */
-h1::before {
-  
-  font-size: 5rem; /* Bigger Star */
-  color: #ff0080; /* Star Color */
-  position: absolute;
-  top: -15px; /* Position it above text */
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  animation: starAnimation 1s forwards;
-}
-
-/* Hover Effects */
-h1:hover {
-  color: #000000; /* Change text color */
-  letter-spacing: 6px; /* Increase letter-spacing */
-  transform: translateY(-5px); /* Slightly move the text up */
 }
 
 /* Star Animation */
@@ -563,8 +515,12 @@ h1:hover::before {
   padding: 50px;
   background-color: #f9f9f9; /* Slight background to make the content pop */
 }
-.our-work-container h1{
-  color: rgb(126, 119, 119);
+.our-work-container h2{
+  text-transform: uppercase;
+  margin-top: 15px;
+  font-size: 46px;
+  letter-spacing: 3px;
+  color: #333333; 
 }
 .our-work-container h3 a {
   text-decoration: none;
@@ -578,15 +534,11 @@ h1:hover::before {
   text-decoration: underline;
 }
 
-h1 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px;
-}
+
 
 p {
   font-size: 18px;
-  color: #777;
+  color: #787878;
   margin-bottom: 40px;
 }
 
@@ -712,7 +664,7 @@ p {
 .testimonial-header h2 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #000000;
+  color: #333333;
   margin-bottom: 10px;
 }
 
