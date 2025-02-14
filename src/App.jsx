@@ -8,6 +8,8 @@ import Footer from './components/Footer/Footer';
 import Contact from './components/Contacta/Contact';
 import Gallery from './components/Gallery/Gallery';
 import Team from './components/Team/Team';
+import CaseStudy from './components/CaseStudy/CaseStudy';
+
 
 const App = () => {
   return (
@@ -17,11 +19,12 @@ const App = () => {
         <Route path="/" element={<Home />} />  
         <Route path="/about-us" element={<About />} />  
         <Route path="/services" element={<Service />} /> 
+        <Route path="/case-study" element={<CaseStudy/>} /> 
         <Route path="/gallery" element={<Gallery />} /> 
         <Route path='/our-team' element={<Team/>}/>
         <Route path="/contact" element={<Contact />} /> 
       </Routes>
-      <Footer />  
+      <Footer />    
     </Router>
   );
 };

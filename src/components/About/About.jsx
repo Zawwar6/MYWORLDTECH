@@ -4,6 +4,7 @@ import './About.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 const About = () => {
   const navigate = useNavigate(); // ✅ Navigation hook
 

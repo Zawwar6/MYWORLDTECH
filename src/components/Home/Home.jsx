@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { useEffect, useState ,useRef } from "react";
 import './Home.css';
+import Marquee from 'react-fast-marquee'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -119,7 +120,7 @@ const Home = () => {
        const navigate = useNavigate(); 
          const handleNavigation = (path) => {
            navigate(path);
-           window.scrollTo(0, 0);
+           window.scrollTo(0,0);
           
          };
        
@@ -142,7 +143,7 @@ const Home = () => {
       <section className="brand-slider-section">
         <h2 className="brand-slider-title">Our Tech Stack</h2>
         <br /><br /><br />
-        <Slider {...sliderSettings}>
+        {/* <Slider {...sliderSettings}>
           <div><img src="/React.png" alt="Brand 1" className="brand-logo" /></div>
           <div><img src="/Amazon.png" alt="Brand 2" className="brand-logo" /></div>
           <div><img src="/Microsoft.png" alt="Brand 4" className="brand-logo" /></div>
@@ -151,8 +152,20 @@ const Home = () => {
           <div><img src="/php.png" alt="Brand 4" className="brand-logo" /></div>
           <div><img src="/asp.net.png" alt="Brand 4" className="brand-logo" /></div>
           <div><img src="/MongoDB.jpg" alt="Brand 4" className="brand-logo" /></div>
-          {/* Add more logos as needed */}
-        </Slider>
+         
+        </Slider> */}
+    <div className="brand-slider">
+        <Marquee speed={50} gradient={false}>
+          <img src="/React.png" alt="Brand 1" className="brand-logo" style={{ marginRight: "10px" }}/>
+          <img src="/Amazon.png" alt="Brand 2" className="brand-logo"style={{ marginRight: "10px" }} />
+          <img src="/Microsoft.png" alt="Brand 3" className="brand-logo"style={{ marginRight: "10px" }} />
+          <img src="/aws.png" alt="Brand 4" className="brand-logo" style={{ marginRight: "10px" }}/>
+          <img src="/php.png" alt="Brand 4" className="brand-logo" style={{ marginRight: "10px" }}/>
+          <img src="/asp.net.png" alt="Brand 4" className="brand-logo" style={{ marginRight: "10px" }}/>
+          <img src="/MongoDB.jpg" alt="Brand 4" className="brand-logo"style={{ marginRight: "10px" }} />
+          <img src="/amazon1.png" alt="Brand 4" className="brand-logo"style={{ marginRight: "10px" }} />
+        </Marquee>
+      </div>
       </section>
 
       <div>
@@ -390,6 +403,7 @@ const Home = () => {
         <textarea name="" id="" rows={10} cols={150}></textarea>
       </div>
     </div>
+   
     </div>
     
   );

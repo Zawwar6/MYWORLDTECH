@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Gallery.css';
 import { motion } from 'framer-motion';
+import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa"; 
 import Footer from '../Footer/Footer';
 
 const Gallery = () => {
@@ -33,9 +34,6 @@ const Gallery = () => {
     ]
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0); // Jab Gallery page load hoga, tab scroll top pe chala jayega
-  }, []);
   
 
   return (
@@ -76,7 +74,7 @@ const Gallery = () => {
 ))}
         </div>
       </section>
-     
+    
     </div>
   );
 };

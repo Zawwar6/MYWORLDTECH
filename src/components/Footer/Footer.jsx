@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="footer-contacts">
             <h5 className="footer-title">Contacts</h5>
             <p className="footer-info">Email: <a href="support@myworldtec.com" className="footer-link">support@myworldtec.com</a></p>
-            <p className="footer-info">Phone: <a href="00000000000" className="footer-link">00000000000</a></p>
+            {/* <p className="footer-info">Phone: <a href="00000000000" className="footer-link">00000000000</a></p> */}
           </div>
           
           <div className="footer-links">

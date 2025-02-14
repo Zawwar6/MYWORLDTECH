@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.case-studies-containers {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(90deg, #f2f2f2, #6e6e6e);
+  color: #fff;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.case-studies-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+  color: #000;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.case-studies-text {
+  width: 50%;
+}
+
+.case-studies-text h2 {
+  font-family: 'Zurich XBlk BT';
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #0e6fdf, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.case-studies-text p {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #1e1b1b;
+}
+
+.case-studies-image {
+  width: 45%;
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.case-studies-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.tech-stack-section h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: -19px;
+  color: #5f5e5e;
+  margin-bottom: -4px;
+  text-shadow: 1px 1px 5px rgb(3, 3, 3);
+}
+
+.case-number {
+  font-size: 100px !important;
+  font-weight: bold;
+  color: #dce1e6;
+  text-shadow: 2px 2px 0px rgb(0, 0, 0);
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablets (width <= 1024px) */
+@media (max-width: 1024px) {
+  .case-studies-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .case-studies-text,
+  .case-studies-image {
+    width: 90%;
+  }
+
+  .case-studies-text h2 {
+    font-size: 32px;
+  }
+
+  .case-studies-text p {
+    font-size: 16px;
+  }
+
+  .case-number {
+    font-size: 80px;
+  }
+}
+
+/* Mobile Devices (width <= 768px) */
+@media (max-width: 768px) {
+  .case-studies-text {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .case-studies-image {
+    width: 100%;
+  }
+
+  .case-studies-text h2 {
+    font-size: 28px;
+  }
+
+  .case-studies-text p {
+    font-size: 14px;
+  }
+
+  .tech-stack-section h2 {
+    font-size: 32px;
+  }
+
+  .case-number {
+    font-size: 60px;
+  }
+}
+
+/* Small Mobile Devices (width <= 480px) */
+@media (max-width: 480px) {
+  .case-studies-text h2 {
+    font-size: 24px;
+  }
+
+  .case-studies-text p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .tech-stack-section h2 {
+    font-size: 28px;
+  }
+
+  .case-number {
+    font-size: 50px;
+  }
+}

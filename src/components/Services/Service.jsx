@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Service.css';
-import Footer from '../Footer/Footer';
+import { motion } from "framer-motion";
+import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa"; 
 
 const Service = () => {
   const navigate = useNavigate(); // ✅ Correct way to use navigation
@@ -34,6 +35,7 @@ const Service = () => {
       </div>
     </div>
   </section>
+  
 </div>
 
   );

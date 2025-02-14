@@ -18,7 +18,10 @@ const Team = () => {
           <img src="/image4.png" alt="Team 4" />
         </div>
       </div>
+
+      
     </section>
+    
   );
 };
 
