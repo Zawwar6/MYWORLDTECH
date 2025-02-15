@@ -9,14 +9,12 @@ const Contact = () => {
   const budget = ["$2000-$5000", "$5000-$10000", "more than $10000"];
 
   const [activeTasks, setActiveTasks] = useState([]);
-  const [activeBudget, setActiveBudget] = useState(null);
+  const [activeBudget, setActiveBudget] = useState("");
   const [captchaValue, setCaptchaValue] = useState(null);
 
   const toggleTask = (task) => {
     setActiveTasks((prevTasks) =>
-      prevTasks.includes(task)
-        ? prevTasks.filter((t) => t !== task)
-        : [...prevTasks, task]
+      prevTasks.includes(task) ? prevTasks.filter((t) => t !== task) : [...prevTasks, task]
     );
   };
 
@@ -44,6 +42,7 @@ const Contact = () => {
         {tasks.map((task, index) => (
           <button 
             key={index} 
+            type="button"
             className={`task-button ${activeTasks.includes(task) ? "active" : ""}`}
             onClick={() => toggleTask(task)}
           >
@@ -51,11 +50,11 @@ const Contact = () => {
           </button>
         ))}
       </div>
-      
+
       <form className="form-container" onSubmit={handleSubmit}>
         {fields.map((field, index) => (
           <div key={index} className="input-group">
-            <input type="text" placeholder={field} className="input-field" />
+            <input type="text" placeholder={field} className="input-field" name={field.toLowerCase().replace(/\s/g, "_")} required />
           </div>
         ))}
 
@@ -73,19 +72,24 @@ const Contact = () => {
           ))}
         </div>
 
+        {/* Hidden input to send selected budget */}
+        <input type="hidden" name="budget" value={activeBudget} />
+
         <div className="project-details">
           <h3 className="project-text">Share details about your project</h3>
           <br />
-          <textarea rows={10} cols={150}></textarea>
+          <textarea name="project_details" rows={10} cols={150} required></textarea>
         </div>
 
         <div className="captcha-button-container">
           <ReCAPTCHA 
             className="recaptcha" 
-            sitekey="6Le4NNgqAAAAAJWrZfXU3m8ssIPhx_nRH4fgxlqq"  // 🔹 Yahan apni Google reCAPTCHA Site Key paste karein
+            sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK"  // ✅ Apni Google reCAPTCHA Site Key lagayein
             onChange={handleCaptchaChange} 
           />
-          <button type="submit" className="submit-buttons">Submit Form</button>
+          <button type="submit" className="submit-buttons" disabled={!captchaValue}>
+            Submit Form
+          </button>
         </div>
       </form>
     </div>
