@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import Footer from "../Footer/Footer";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const tasks = ["Branding", "Photography", "Social Media", "Videography", "UI/UX"];
@@ -16,6 +17,10 @@ const Contact = () => {
         ? prevTasks.filter((t) => t !== task)
         : [...prevTasks, task]
     );
+  };
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
   };
 
   return (
@@ -60,7 +65,10 @@ const Contact = () => {
         <br />
         <textarea name="" id="" rows={10} cols={150}></textarea>
       </div>
-      
+      <div className="captcha-button-container">
+        <ReCAPTCHA className="recaptcha" sitekey="YOUR_SITE_KEY" onChange={handleCaptchaChange} />
+        <button type="submit" className="submit-buttons">Submit Form</button>
+      </div>
     </div>
   );
 };

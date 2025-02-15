@@ -10,6 +10,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa"; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Home = () => {
   // const handleSubmit = () => {
@@ -124,7 +125,10 @@ const Home = () => {
           
          };
        
-       
+        const [captchaValue, setCaptchaValue] = useState(null);
+         const handleCaptchaChange = (value) => {
+           setCaptchaValue(value);
+         };
 
          
   return (
@@ -403,7 +407,10 @@ const Home = () => {
         <textarea name="" id="" rows={10} cols={150}></textarea>
       </div>
     </div>
-   
+    <div className="captcha-button-container">
+        <ReCAPTCHA className="recaptcha" sitekey="YOUR_SITE_KEY" onChange={handleCaptchaChange} />
+        <button type="submit" className="submit-buttons">Submit Form</button>
+      </div>
     </div>
     
   );
