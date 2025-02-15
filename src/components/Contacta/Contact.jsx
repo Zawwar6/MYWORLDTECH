@@ -87,7 +87,7 @@ const Contact = () => {
             sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK"
             onChange={handleCaptchaChange} 
           />
-          <button type="submit" className="submit-buttons" disabled={!captchaValue}>
+          <button type="submit" className="submit-buttons" >
             Submit Form
           </button>
         </div>
