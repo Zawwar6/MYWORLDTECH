@@ -82,7 +82,7 @@ const Contact = () => {
         <div className="captcha-button-container">
           <ReCAPTCHA 
             className="recaptcha" 
-            sitekey="6LewMdgqAAAAAA2O5BDq-kugzLKd5aOis0zm0Viu"  // 🔹 Yahan apni Google reCAPTCHA Site Key paste karein
+            sitekey="6Le4NNgqAAAAAJWrZfXU3m8ssIPhx_nRH4fgxlqq"  // 🔹 Yahan apni Google reCAPTCHA Site Key paste karein
             onChange={handleCaptchaChange} 
           />
           <button type="submit" className="submit-buttons">Submit Form</button>
