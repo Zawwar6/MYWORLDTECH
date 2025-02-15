@@ -94,7 +94,7 @@ const Contact = () => {
       </form>
 
       {/* Toast Container for Notifications */}
-      <ToastContainer position="bottom-right" autoClose={3000} />
+      <ToastContainer position="bottom-center" autoClose={3000} />
     </div>
   );
 };
