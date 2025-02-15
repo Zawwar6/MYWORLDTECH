@@ -10,6 +10,7 @@ const Contact = () => {
 
   const [activeTasks, setActiveTasks] = useState([]);
   const [activeBudget, setActiveBudget] = useState(null);
+  const [captchaValue, setCaptchaValue] = useState(null);
 
   const toggleTask = (task) => {
     setActiveTasks((prevTasks) =>
@@ -18,9 +19,21 @@ const Contact = () => {
         : [...prevTasks, task]
     );
   };
-  const [captchaValue, setCaptchaValue] = useState(null);
+
   const handleCaptchaChange = (value) => {
     setCaptchaValue(value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!captchaValue) {
+      alert("Please verify reCAPTCHA");
+      return;
+    }
+
+    alert("Form submitted successfully!");
+    // Backend API ko yahan call karein agar required ho
   };
 
   return (
@@ -39,36 +52,42 @@ const Contact = () => {
         ))}
       </div>
       
-      <form className="form-container">
+      <form className="form-container" onSubmit={handleSubmit}>
         {fields.map((field, index) => (
           <div key={index} className="input-group">
             <input type="text" placeholder={field} className="input-field" />
           </div>
         ))}
+
+        <h2 className="title budget-title">Select Your Budget</h2>
+        <div className="button-group budget-group">
+          {budget.map((amount, index) => (
+            <button 
+              key={index} 
+              type="button"
+              className={`budget-button ${activeBudget === amount ? "active" : ""}`}
+              onClick={() => setActiveBudget(amount)}
+            >
+              {amount}
+            </button>
+          ))}
+        </div>
+
+        <div className="project-details">
+          <h3 className="project-text">Share details about your project</h3>
+          <br />
+          <textarea rows={10} cols={150}></textarea>
+        </div>
+
+        <div className="captcha-button-container">
+          <ReCAPTCHA 
+            className="recaptcha" 
+            sitekey="6LewMdgqAAAAAA2O5BDq-kugzLKd5aOis0zm0Viu"  // 🔹 Yahan apni Google reCAPTCHA Site Key paste karein
+            onChange={handleCaptchaChange} 
+          />
+          <button type="submit" className="submit-buttons">Submit Form</button>
+        </div>
       </form>
-
-      <h2 className="title budget-title">Select Your Budget</h2>
-      <div className="button-group budget-group">
-        {budget.map((amount, index) => (
-          <button 
-            key={index} 
-            className={`budget-button ${activeBudget === amount ? "active" : ""}`}
-            onClick={() => setActiveBudget(amount)}
-          >
-            {amount}
-          </button>
-        ))}
-      </div>
-
-      <div className="project-details">
-        <h3 className="project-text">Share details about your project</h3>
-        <br />
-        <textarea name="" id="" rows={10} cols={150}></textarea>
-      </div>
-      <div className="captcha-button-container">
-        {/* <ReCAPTCHA className="recaptcha" sitekey="6LewMdgqAAAAAA2O5BDq-kugzLKd5aOis0zm0Viu" onChange={handleCaptchaChange} /> */}
-        <button type="submit" className="submit-buttons">Submit Form</button>
-      </div>
     </div>
   );
 };
