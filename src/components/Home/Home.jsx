@@ -431,7 +431,7 @@ const Home = () => {
             sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK"  // ✅ Apni Google reCAPTCHA Site Key lagayein
             onChange={handleCaptchaChange} 
           />
-          <button type="submit" className="submit-buttons" disabled={!captchaValue}>
+          <button type="submit" className="submit-buttons">
             Submit Form
           </button>
         </div>
