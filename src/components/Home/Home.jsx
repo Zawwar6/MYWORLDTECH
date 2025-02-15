@@ -408,7 +408,7 @@ const Home = () => {
       </div>
     </div>
     <div className="captcha-button-container">
-        <ReCAPTCHA className="recaptcha" sitekey="YOUR_SITE_KEY" onChange={handleCaptchaChange} />
+        <ReCAPTCHA className="recaptcha" sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK" onChange={handleCaptchaChange} />
         <button type="submit" className="submit-buttons">Submit Form</button>
       </div>
     </div>
