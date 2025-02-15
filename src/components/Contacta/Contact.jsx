@@ -66,7 +66,7 @@ const Contact = () => {
         <textarea name="" id="" rows={10} cols={150}></textarea>
       </div>
       <div className="captcha-button-container">
-        <ReCAPTCHA className="recaptcha" sitekey="YOUR_SITE_KEY" onChange={handleCaptchaChange} />
+        <ReCAPTCHA className="recaptcha" sitekey="6LewMdgqAAAAAA2O5BDq-kugzLKd5aOis0zm0Viu" onChange={handleCaptchaChange} />
         <button type="submit" className="submit-buttons">Submit Form</button>
       </div>
     </div>

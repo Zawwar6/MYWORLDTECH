@@ -383,7 +383,7 @@ const Home = () => {
       <form className="form-container">
         {fields.map((field, index) => (
           <div key={index} className="input-group">
-            <input type="text" placeholder={field} className="input-field" />
+            <input type="text" placeholder={field} className="input-field" required />
           </div>
         ))}
       </form>
