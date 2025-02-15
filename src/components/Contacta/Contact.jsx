@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Contact.css";
 import Footer from "../Footer/Footer";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const tasks = ["Branding", "Photography", "Social Media", "Videography", "UI/UX"];
@@ -26,12 +28,11 @@ const Contact = () => {
     e.preventDefault();
 
     if (!captchaValue) {
-      alert("Please verify reCAPTCHA");
+      toast.error("⚠️ Please verify reCAPTCHA!");
       return;
     }
 
-    alert("Form submitted successfully!");
-    // Backend API ko yahan call karein agar required ho
+    toast.success("✅ Form submitted successfully!");
   };
 
   return (
@@ -72,7 +73,6 @@ const Contact = () => {
           ))}
         </div>
 
-        {/* Hidden input to send selected budget */}
         <input type="hidden" name="budget" value={activeBudget} />
 
         <div className="project-details">
@@ -84,7 +84,7 @@ const Contact = () => {
         <div className="captcha-button-container">
           <ReCAPTCHA 
             className="recaptcha" 
-            sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK"  // ✅ Apni Google reCAPTCHA Site Key lagayein
+            sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK"
             onChange={handleCaptchaChange} 
           />
           <button type="submit" className="submit-buttons" disabled={!captchaValue}>
@@ -92,6 +92,9 @@ const Contact = () => {
           </button>
         </div>
       </form>
+
+      {/* Toast Container for Notifications */}
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };

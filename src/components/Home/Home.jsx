@@ -11,6 +11,9 @@ import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Home = () => {
   // const handleSubmit = () => {
@@ -110,6 +113,7 @@ const Home = () => {
        
          const [activeTasks, setActiveTasks] = useState([]);
          const [activeBudget, setActiveBudget] = useState(null);
+          const [captchaValue, setCaptchaValue] = useState(null);
        
          const toggleTask = (task) => {
            setActiveTasks((prevTasks) =>
@@ -125,10 +129,20 @@ const Home = () => {
           
          };
        
-        const [captchaValue, setCaptchaValue] = useState(null);
          const handleCaptchaChange = (value) => {
-           setCaptchaValue(value);
-         };
+          setCaptchaValue(value);
+        };
+      
+        const handleSubmit = (e) => {
+          e.preventDefault();
+      
+          if (!captchaValue) {
+            toast.error("⚠️ Please verify reCAPTCHA!");
+            return;
+          }
+      
+          toast.success("✅ Form submitted successfully!");
+        };
 
          
   return (
@@ -372,6 +386,7 @@ const Home = () => {
         {tasks.map((task, index) => (
           <button 
             key={index} 
+            type="button"
             className={`task-button ${activeTasks.includes(task) ? "active" : ""}`}
             onClick={() => toggleTask(task)}
           >
@@ -379,38 +394,50 @@ const Home = () => {
           </button>
         ))}
       </div>
-      
-      <form className="form-container">
+
+      <form className="form-container" onSubmit={handleSubmit}>
         {fields.map((field, index) => (
           <div key={index} className="input-group">
-            <input type="text" placeholder={field} className="input-field" required />
+            <input type="text" placeholder={field} className="input-field" name={field.toLowerCase().replace(/\s/g, "_")} required />
           </div>
         ))}
-      </form>
 
-      <h2 className="title budget-title">Select Your Budget</h2>
-      <div className="button-group budget-group">
-        {budget.map((amount, index) => (
-          <button 
-            key={index} 
-            className={`budget-button ${activeBudget === amount ? "active" : ""}`}
-            onClick={() => setActiveBudget(amount)}
-          >
-            {amount}
+        <h2 className="title budget-title">Select Your Budget</h2>
+        <div className="button-group budget-group">
+          {budget.map((amount, index) => (
+            <button 
+              key={index} 
+              type="button"
+              className={`budget-button ${activeBudget === amount ? "active" : ""}`}
+              onClick={() => setActiveBudget(amount)}
+            >
+              {amount}
+            </button>
+          ))}
+        </div>
+
+        {/* Hidden input to send selected budget */}
+        <input type="hidden" name="budget" value={activeBudget} />
+
+        <div className="project-details">
+          <h3 className="project-text">Share details about your project</h3>
+          <br />
+          <textarea name="project_details" rows={10} cols={150} required></textarea>
+        </div>
+
+        <div className="captcha-button-container">
+          <ReCAPTCHA 
+            className="recaptcha" 
+            sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK"  // ✅ Apni Google reCAPTCHA Site Key lagayein
+            onChange={handleCaptchaChange} 
+          />
+          <button type="submit" className="submit-buttons" disabled={!captchaValue}>
+            Submit Form
           </button>
-        ))}
-      </div>
-
-      <div className="project-details">
-        <h3 className="project-text">Share details about your project</h3>
-        <br />
-        <textarea name="" id="" rows={10} cols={150}></textarea>
-      </div>
+        </div>
+      </form>
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
-    <div className="captcha-button-container">
-        <ReCAPTCHA className="recaptcha" sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK" onChange={handleCaptchaChange} />
-        <button type="submit" className="submit-buttons">Submit Form</button>
-      </div>
     </div>
     
   );
