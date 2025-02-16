@@ -51,7 +51,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbxFPu8JbiUSZg4wyj398_gr8bJyTEvqiAYR0R-yoY30Ui625B2FAIUz5-_yUM3tUlP2aA/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbw2iMEa49jw41P16fV7ORovu7x_CClT-oGh3hEDCJpdpXWtrHITqJXix9nV9YT9SruRzQ/exec", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
