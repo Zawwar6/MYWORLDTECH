@@ -13,18 +13,6 @@ const Contact = () => {
   const [activeTasks, setActiveTasks] = useState([]);
   const [activeBudget, setActiveBudget] = useState("");
   const [captchaValue, setCaptchaValue] = useState(null);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company_name: "",
-    your_designation: "",
-    phone_number: "",
-    project_details: "",
-  });
-
-  // ✅ Google Apps Script Web App URL (Replace with your actual URL)
-  const scriptURL = "https://script.google.com/macros/s/AKfycbxbQheXn0HB74WOn50gvhGQd34jblr68UYDO_RdbnExCMy2yDMsLBB7BQPlHRy7qiSpDg/exec";
-
 
   const toggleTask = (task) => {
     setActiveTasks((prevTasks) =>
@@ -32,15 +20,11 @@ const Contact = () => {
     );
   };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   const handleCaptchaChange = (value) => {
     setCaptchaValue(value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!captchaValue) {
@@ -48,38 +32,7 @@ const Contact = () => {
       return;
     }
 
-    const formBody = new FormData();
-    Object.keys(formData).forEach((key) => formBody.append(key, formData[key]));
-    formBody.append("tasks", activeTasks.join(", "));
-    formBody.append("budget", activeBudget);
-
-    try {
-      const response = await fetch(scriptURL, {
-        method: "POST",
-        body: formBody,
-      });
-
-      const result = await response.json();
-      if (result.result === "success") {
-        toast.success("✅ Form submitted successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          company_name: "",
-          your_designation: "",
-          phone_number: "",
-          project_details: "",
-        });
-        setActiveTasks([]);
-        setActiveBudget("");
-        setCaptchaValue(null);
-      } else {
-        toast.error("❌ Error: " + result.error);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      toast.error("❌ Failed to send data!");
-    }
+    toast.success("✅ Form submitted successfully!");
   };
 
   return (
@@ -102,15 +55,7 @@ const Contact = () => {
       <form className="form-container" onSubmit={handleSubmit}>
         {fields.map((field, index) => (
           <div key={index} className="input-group">
-            <input
-              type="text"
-              placeholder={field}
-              className="input-field"
-              name={field.toLowerCase().replace(/\s/g, "_")}
-              value={formData[field.toLowerCase().replace(/\s/g, "_")]}
-              onChange={handleChange}
-              required
-            />
+            <input type="text" placeholder={field} className="input-field" name={field.toLowerCase().replace(/\s/g, "_")} required />
           </div>
         ))}
 
@@ -128,31 +73,27 @@ const Contact = () => {
           ))}
         </div>
 
+        <input type="hidden" name="budget" value={activeBudget} />
+
         <div className="project-details">
           <h3 className="project-text">Share details about your project</h3>
           <br />
-          <textarea 
-            name="project_details"
-            rows={10}
-            cols={150}
-            value={formData.project_details}
-            onChange={handleChange}
-            required
-          ></textarea>
+          <textarea name="project_details" rows={10} cols={150} required></textarea>
         </div>
 
         <div className="captcha-button-container">
           <ReCAPTCHA 
             className="recaptcha" 
-            sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK" // 🚀 Replace with your actual reCAPTCHA key
+            sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK"
             onChange={handleCaptchaChange} 
           />
-          <button type="submit" className="submit-buttons">
+          <button type="submit" className="submit-buttons" >
             Submit Form
           </button>
         </div>
       </form>
 
+      {/* Toast Container for Notifications */}
       <ToastContainer position="bottom-center" autoClose={3000} />
     </div>
   );
