@@ -36,7 +36,7 @@ const Contact = () => {
     setCaptchaValue(value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!captchaValue) {
@@ -44,12 +44,35 @@ const Contact = () => {
       return;
     }
 
-    toast.success("✅ Form submitted successfully!");
+    const payload = {
+      ...formData,
+      tasks: activeTasks,
+      budget: activeBudget,
+    };
 
-    // 🔄 Page refresh after 3 seconds
-    setTimeout(() => {
-      window.location.reload();
-    }, 3000);  
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbxFPu8JbiUSZg4wyj398_gr8bJyTEvqiAYR0R-yoY30Ui625B2FAIUz5-_yUM3tUlP2aA/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.text();
+
+      if (result === "Success") {
+        toast.success("✅ Form submitted successfully!");
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+      } else {
+        toast.error("❌ Form submission failed. Try again!");
+      }
+    } catch (error) {
+      toast.error("❌ Error submitting form!");
+      console.error("Error:", error);
+    }
   };
 
   return (
