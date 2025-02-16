@@ -13,11 +13,23 @@ const Contact = () => {
   const [activeTasks, setActiveTasks] = useState([]);
   const [activeBudget, setActiveBudget] = useState("");
   const [captchaValue, setCaptchaValue] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company_name: "",
+    your_designation: "",
+    phone_number: "",
+    project_details: "",
+  });
 
   const toggleTask = (task) => {
     setActiveTasks((prevTasks) =>
       prevTasks.includes(task) ? prevTasks.filter((t) => t !== task) : [...prevTasks, task]
     );
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleCaptchaChange = (value) => {
@@ -33,6 +45,11 @@ const Contact = () => {
     }
 
     toast.success("✅ Form submitted successfully!");
+
+    // 🔄 Page refresh after 3 seconds
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000);  
   };
 
   return (
@@ -55,7 +72,15 @@ const Contact = () => {
       <form className="form-container" onSubmit={handleSubmit}>
         {fields.map((field, index) => (
           <div key={index} className="input-group">
-            <input type="text" placeholder={field} className="input-field" name={field.toLowerCase().replace(/\s/g, "_")} required />
+            <input
+              type="text"
+              placeholder={field}
+              className="input-field"
+              name={field.toLowerCase().replace(/\s/g, "_")}
+              value={formData[field.toLowerCase().replace(/\s/g, "_")]}
+              onChange={handleChange}
+              required
+            />
           </div>
         ))}
 
@@ -73,12 +98,17 @@ const Contact = () => {
           ))}
         </div>
 
-        <input type="hidden" name="budget" value={activeBudget} />
-
         <div className="project-details">
           <h3 className="project-text">Share details about your project</h3>
           <br />
-          <textarea name="project_details" rows={10} cols={150} required></textarea>
+          <textarea 
+            name="project_details"
+            rows={10}
+            cols={150}
+            value={formData.project_details}
+            onChange={handleChange}
+            required
+          ></textarea>
         </div>
 
         <div className="captcha-button-container">
@@ -87,13 +117,12 @@ const Contact = () => {
             sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK"
             onChange={handleCaptchaChange} 
           />
-          <button type="submit" className="submit-buttons" >
+          <button type="submit" className="submit-buttons">
             Submit Form
           </button>
         </div>
       </form>
 
-      {/* Toast Container for Notifications */}
       <ToastContainer position="bottom-center" autoClose={3000} />
     </div>
   );
