@@ -49,7 +49,7 @@ const Contact = () => {
     const payload = { ...formData, budget: activeBudget };
 
     try {
-      const response = await axios.post("https://script.google.com/macros/s/AKfycbwHVR8L7_pevWpm9GsXR8T39-I7uDW3Cvk8zriz4gcMg-B7_AtLfXXL2me93zVBZGJlXg/exec", payload);  // Update URL here
+      const response = await axios.post("https://script.google.com/macros/s/AKfycbwEICtEopmqw4RLiFILF7Sd3L4o7cLkhi6qidL6U4Hr4d2VuEqLoIlNywKiEzIr0F3t_w/exec", payload);  // Update URL here
       if (response.data === "Success") {
         toast.success("✅ Form submitted successfully!");
         setTimeout(() => window.location.reload(), 3000);
