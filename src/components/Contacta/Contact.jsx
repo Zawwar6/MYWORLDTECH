@@ -46,9 +46,9 @@ const Contact = () => {
     }
 
     // Replace with your actual Service ID, Template ID, and User ID
-    const serviceID = "your_service_id";  // Your EmailJS service ID
-    const templateID = "your_template_id";  // Your EmailJS template ID
-    const userID = "your_user_id";  // Your EmailJS public user ID
+    const serviceID = "service_s41r3tv";  // Your EmailJS service ID
+    const templateID = "template_xvlq6ko";  // Your EmailJS template ID
+    const userID = "GTHNOTO5SK2C9bK4b";  // Your EmailJS public user ID
 
     const formDataWithExtras = {
       name: formData.name,
@@ -141,7 +141,7 @@ const Contact = () => {
         <div className="captcha-button-container">
           <ReCAPTCHA 
             className="recaptcha" 
-            sitekey="your_recaptcha_site_key" 
+            sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK" 
             onChange={handleCaptchaChange} 
           />
           <button type="submit" className="submit-buttons">
