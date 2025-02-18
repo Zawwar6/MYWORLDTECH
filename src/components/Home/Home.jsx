@@ -249,7 +249,7 @@ const Home = () => {
               <br /><br /> 
               Whether you’re a startup or an established enterprise, our expert team collaborates with you to turn your vision into reality, delivering results that matter. Let's build something extraordinary together and take your business to the next level.
             </p>
-            <button className="cta-btn" onClick={() => handleNavigation('/our-team')}>View More</button>
+            <button className="cta-btn">View More</button>
           </div>
         </div>
       </section>
