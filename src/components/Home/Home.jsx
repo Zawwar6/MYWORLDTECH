@@ -27,9 +27,9 @@ const Home = () => {
       AOS.refresh(); // ✅ Refresh animations
     }, []);
     const handleNavigation = (path) => {
-      navigate(path); 
+      navigate(path); // Navigate to Team page
       setTimeout(() => {
-        window.scrollTo(0, 0);
+        window.screenTop(0, 0); // Ensure scroll position is reset after the page is rendered
       }, 100);
     };
 
@@ -249,7 +249,7 @@ const Home = () => {
               <br /><br /> 
               Whether you’re a startup or an established enterprise, our expert team collaborates with you to turn your vision into reality, delivering results that matter. Let's build something extraordinary together and take your business to the next level.
             </p>
-            <button className="cta-btn">View More</button>
+            {/* <button className="cta-btn">View More</button> */}
           </div>
         </div>
       </section>
