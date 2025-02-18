@@ -20,6 +20,19 @@ const Home = () => {
   //   console.log("Hello, how are you?");
   // };
 
+  const navigate = useNavigate(); // ✅ Navigation hook
+  
+    useEffect(() => {
+      AOS.init({ duration: 2000, once: true }); // ✅ Ensure animations work smoothly
+      AOS.refresh(); // ✅ Refresh animations
+    }, []);
+    const handleNavigation = (path) => {
+      navigate(path); 
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 100);
+    };
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -107,58 +120,78 @@ const Home = () => {
      }, []);
     
      
-       const tasks = ["Branding", "Photography", "Social Media", "Videography", "UI/UX"];
-         const fields = ["Name", "Email", "Company name", "Your Designation", "Phone Number"];
-         const budget = ["$2000-$5000", "$5000-$10000", "more than $10000"];
-       
-         const [activeTasks, setActiveTasks] = useState([]);
-         const [activeBudget, setActiveBudget] = useState("");
-         const [captchaValue, setCaptchaValue] = useState(null);
-         const [formData, setFormData] = useState({
-           name: "",
-           email: "",
-           company_name: "",
-           your_designation: "",
-           phone_number: "",
-           project_details: "",
-         });
-       
-         const toggleTask = (task) => {
-           setActiveTasks((prevTasks) =>
-             prevTasks.includes(task) ? prevTasks.filter((t) => t !== task) : [...prevTasks, task]
-           );
-         };
-       
-         const handleChange = (e) => {
-           setFormData({ ...formData, [e.target.name]: e.target.value });
-         };
-       
-         const handleCaptchaChange = (value) => {
-           setCaptchaValue(value);
-         };
-       
-         const handleSubmit = (e) => {
-           e.preventDefault();
-       
-           if (!captchaValue) {
-             toast.error("⚠️ Please verify reCAPTCHA!");
-             return;
-           }
-       
+     const tasks = ["Branding", "Photography", "Social Media", "Videography", "UI/UX"];
+     const fields = ["Name", "Email", "Company name", "Your Designation", "Phone Number"];
+     const budget = ["$2000-$5000", "$5000-$10000", "more than $10000"];
+   
+     const [activeTasks, setActiveTasks] = useState([]);
+     const [activeBudget, setActiveBudget] = useState("");
+     const [captchaValue, setCaptchaValue] = useState(null);
+     const [formData, setFormData] = useState({
+       name: "",
+       email: "",
+       company_name: "",
+       your_designation: "",
+       phone_number: "",
+       project_details: "",
+     });
+   
+     const toggleTask = (task) => {
+       setActiveTasks((prevTasks) =>
+         prevTasks.includes(task) ? prevTasks.filter((t) => t !== task) : [...prevTasks, task]
+       );
+     };
+   
+     const handleChange = (e) => {
+       setFormData({ ...formData, [e.target.name]: e.target.value });
+     };
+   
+     const handleCaptchaChange = (value) => {
+       setCaptchaValue(value); // Save reCAPTCHA response
+     };
+   
+     const handleSubmit = (e) => {
+       e.preventDefault();
+   
+       if (!captchaValue) {
+         toast.error("⚠️ Please verify reCAPTCHA!");
+         return;
+       }
+   
+       // Replace with your actual Service ID, Template ID, and User ID
+       const serviceID = "service_s41r3tv";  // Your EmailJS service ID
+       const templateID = "template_xvlq6ko";  // Your EmailJS template ID
+       const userID = "GTHNOTO5SK2C9bK4b";  // Your EmailJS public user ID
+   
+       const formDataWithExtras = {
+         name: formData.name,
+         email: formData.email,
+         company_name: formData.company_name,
+         your_designation: formData.your_designation,
+         phone_number: formData.phone_number,
+         project_details: formData.project_details,
+         tasks: activeTasks.join(", "), // Convert array to string
+         budget: activeBudget,
+         "g-recaptcha-response": captchaValue, // Add reCAPTCHA response
+       };
+   
+       // Send email with EmailJS
+       emailjs.send(serviceID, templateID, formDataWithExtras, userID).then(
+         (result) => {
            toast.success("✅ Form submitted successfully!");
-       
-           // 🔄 Page refresh after 3 seconds
            setTimeout(() => {
              window.location.reload();
-           }, 3000);  
-         };
+           }, 3000);
+         },
+         (error) => {
+           toast.error("❌ Something went wrong!");
+           console.log(error.text);
+         }
+       );
+     };
         
-        const navigate = useNavigate(); 
-          const handleNavigation = (path) => {
-            navigate(path);
-            window.scrollTo(0,0);
-           
-          };
+       
+          
          
   return (
     <div className="home-container">
@@ -201,7 +234,7 @@ const Home = () => {
       </div>
       </section>
 
-      <div>
+      
       <section className="about-us">
         <div className="about-us-container">
           <div className="about-us-image" >
@@ -220,7 +253,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
+   
       <br />
         
       <div>
@@ -413,14 +446,14 @@ const Home = () => {
       <form className="form-container" onSubmit={handleSubmit}>
         {fields.map((field, index) => (
           <div key={index} className="input-group">
-            <input
-              type="text"
-              placeholder={field}
-              className="input-field"
-              name={field.toLowerCase().replace(/\s/g, "_")}
-              value={formData[field.toLowerCase().replace(/\s/g, "_")]}
-              onChange={handleChange}
-              required
+            <input 
+              type="text" 
+              placeholder={field} 
+              className="input-field" 
+              name={field.toLowerCase().replace(/\s/g, "_")} 
+              value={formData[field.toLowerCase().replace(/\s/g, "_")]} 
+              onChange={handleChange} 
+              required 
             />
           </div>
         ))}
@@ -439,15 +472,17 @@ const Home = () => {
           ))}
         </div>
 
+        <input type="hidden" name="budget" value={activeBudget} />
+
         <div className="project-details">
           <h3 className="project-text">Share details about your project</h3>
           <br />
           <textarea 
-            name="project_details"
-            rows={10}
-            cols={150}
-            value={formData.project_details}
-            onChange={handleChange}
+            name="project_details" 
+            rows={10} 
+            cols={150} 
+            value={formData.project_details} 
+            onChange={handleChange} 
             required
           ></textarea>
         </div>
@@ -455,7 +490,7 @@ const Home = () => {
         <div className="captcha-button-container">
           <ReCAPTCHA 
             className="recaptcha" 
-            sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK"
+            sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK" 
             onChange={handleCaptchaChange} 
           />
           <button type="submit" className="submit-buttons">
@@ -464,6 +499,7 @@ const Home = () => {
         </div>
       </form>
 
+      {/* Toast Container for Notifications */}
       <ToastContainer position="bottom-center" autoClose={3000} />
     </div>
     </div>

@@ -1,7 +1,8 @@
 
-body {
+body ,html {
   touch-action: manipulation; 
-  
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -34,4 +35,4 @@ body {
     color: #000;
     cursor: pointer;
   }
-  
+ 

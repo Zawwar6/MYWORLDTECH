@@ -12,11 +12,11 @@ const About = () => {
     AOS.init({ duration: 1000, once: true }); // ✅ Ensure animations work smoothly
     AOS.refresh(); // ✅ Refresh animations
   }, []);
-
   const handleNavigation = (path) => {
-    navigate(path);
-    window.scrollTo(0, 0);
-   
+    navigate(path); // Navigate to Team page
+    setTimeout(() => {
+      window.scrollTo(0, 0); // Ensure scroll position is reset after the page is rendered
+    }, 100);
   };
 
   return (

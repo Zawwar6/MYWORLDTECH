@@ -5,14 +5,15 @@
   import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa"; 
 
   const Service = () => {
-    const navigate = useNavigate(); // ✅ Correct way to use navigation
-
-    // Function to navigate and scroll to top
-    const handleNavigation = (path) => {
-      navigate(path);
-      window.scrollTo(0, 0); // Scroll to top
-    };
-
+    const navigate = useNavigate(); // ✅ Navigation hook
+    
+    
+      const handleNavigation = (path) => {
+        navigate(path); // Navigate to Team page
+        setTimeout(() => {
+          window.scrollTo(0, 0); // Ensure scroll position is reset after the page is rendered
+        }, 100);
+      };
     return (
       <div>
     <section className="services">
