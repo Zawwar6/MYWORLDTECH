@@ -21,7 +21,7 @@ const Team = () => {
           With a commanding presence on every major social media platform, we are setting trends, engaging audiences, and driving growth like never before. Whether it’s crafting a compelling online identity, optimizing websites for peak performance, or creating immersive digital experiences, MyWorldTec is the name businesses trust worldwide.
         </p>
         <p className="team-para">
-          Operating from <strong>Washington, D.C. (US)</strong>, and reaching **every corner of the world**, our mission is clear: to redefine digital success and empower businesses with innovative solutions. We believe in excellence, creativity, and relentless innovation, making us a trusted partner for companies looking to scale in today’s digital-first world.
+          Operating from <strong>washington-DC United States</strong>, and reaching **every corner of the world**, our mission is clear: to redefine digital success and empower businesses with innovative solutions. We believe in excellence, creativity, and relentless innovation, making us a trusted partner for companies looking to scale in today’s digital-first world.
         </p>
         <p className="team-para">
           Join us on this journey as we continue to lead, inspire, and transform the digital landscape one groundbreaking project at a time. 🚀
