@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   const handleCaptchaChange = (value) => {
-    setCaptchaValue(value);
+    setCaptchaValue(value); // Save reCAPTCHA response
   };
 
   const handleSubmit = (e) => {
@@ -45,16 +45,24 @@ const Contact = () => {
       return;
     }
 
-    const serviceID = "service_s41r3tv"; // EmailJS Service ID
-    const templateID = "template_xvlq6ko"; // EmailJS Template ID
-    const userID = "GTHNOTO5SK2C9bK4b"; // EmailJS Public Key
+    // Replace with your actual Service ID, Template ID, and User ID
+    const serviceID = "your_service_id";  // Your EmailJS service ID
+    const templateID = "your_template_id";  // Your EmailJS template ID
+    const userID = "your_user_id";  // Your EmailJS public user ID
 
     const formDataWithExtras = {
-      ...formData,
-      tasks: activeTasks.join(", "), // Convert tasks array to comma-separated string
+      name: formData.name,
+      email: formData.email,
+      company_name: formData.company_name,
+      your_designation: formData.your_designation,
+      phone_number: formData.phone_number,
+      project_details: formData.project_details,
+      tasks: activeTasks.join(", "), // Convert array to string
       budget: activeBudget,
+      "g-recaptcha-response": captchaValue, // Add reCAPTCHA response
     };
 
+    // Send email with EmailJS
     emailjs.send(serviceID, templateID, formDataWithExtras, userID).then(
       (result) => {
         toast.success("✅ Form submitted successfully!");
@@ -64,6 +72,7 @@ const Contact = () => {
       },
       (error) => {
         toast.error("❌ Something went wrong!");
+        console.log(error.text);
       }
     );
   };
@@ -132,7 +141,7 @@ const Contact = () => {
         <div className="captcha-button-container">
           <ReCAPTCHA 
             className="recaptcha" 
-            sitekey="6Lc2NtgqAAAAABlmb_4MIxSLqcQDPNtq39NZCFcK" 
+            sitekey="your_recaptcha_site_key" 
             onChange={handleCaptchaChange} 
           />
           <button type="submit" className="submit-buttons">
