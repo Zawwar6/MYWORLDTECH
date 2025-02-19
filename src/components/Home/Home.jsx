@@ -19,65 +19,64 @@ const Home = () => {
   // const handleSubmit = () => {
   //   console.log("Hello, how are you?");
   // };
-
-  const navigate = useNavigate(); // ✅ Navigation hook
-  
-    useEffect(() => {
+   useEffect(() => {
       AOS.init({ duration: 2000, once: true }); // ✅ Ensure animations work smoothly
       AOS.refresh(); // ✅ Refresh animations
     }, []);
-    const handleNavigation = (path) => {
-      navigate(path); // Navigate to Team page
-      setTimeout(() => {
-        window.screenTop(0, 0); // Ensure scroll position is reset after the page is rendered
-      }, 100);
-    };
+    const navigate = useNavigate(); 
 
-  const [isVisible, setIsVisible] = useState(false);
+         const handleNavigation = (path) => {
+            navigate(path); 
+            setTimeout(() => {
+              window.scrollTo(0, 0); 
+            }, 100);
+          };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = document.getElementById("work-card");
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          setIsVisible(true);
-        }
-      }
-    };
+  // const [isVisible, setIsVisible] = useState(false);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const element = document.getElementById("work-card");
+  //     if (element) {
+  //       const rect = element.getBoundingClientRect();
+  //       if (rect.top < window.innerHeight - 100) {
+  //         setIsVisible(true);
+  //       }
+  //     }
+  //   };
 
-  const sliderSettings = {
-    infinite: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
+  // const sliderSettings = {
+  //   infinite: true,
+  //   speed: 500,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //       },
+  //     },
+  //   ],
+  // };
   const testimonials = [
     {
       quote: "They helped us create an amazing 2D animation and video editing solution that has given our brand a fresh identity.",
@@ -256,14 +255,14 @@ const Home = () => {
    
       <br />
         
-      <div>
+ 
   <section className="services">
     <h2>Our Services</h2>
     <div className="service-cards">
       <div className="service-card">
         <img src="/Web.png" alt="Website Design" className="service-icon"/>
         <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
-        <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+        <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button>
       </div>
       <div className="service-card">
         <img src="/2DV.png" alt="2D Animation" className="service-icon"/>
@@ -277,9 +276,9 @@ const Home = () => {
       </div>
     </div>
   </section>
-</div>
-      {/* Portfolio Section */}
 
+      {/* Portfolio Section */}
+       <section>
       <div className="our-work-container">
       <h2>Our Work</h2> <br />
       <p>Explore our recent projects and see how we can help your business grow!</p>
@@ -383,7 +382,7 @@ const Home = () => {
         </motion.div>
       </div>
     </div>
-      
+    </section>
       <hr className="animated-hr" />
 
       {/* Other sections */}
@@ -424,6 +423,7 @@ const Home = () => {
       {/* Call to Action Section */}
       <section className="cta-section">
         <h2>Ready to Start Your Project?</h2>
+        
       </section>
     
       {/* Contact Section */}

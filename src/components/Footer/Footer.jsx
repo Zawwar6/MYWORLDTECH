@@ -2,9 +2,12 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaGoogle, FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
 import "./Footer.css";
 import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
 
 const Footer = () => {
+
   return (
+    
     <footer className="footer"> 
       <div className="container">
       <motion.h1 
@@ -52,6 +55,7 @@ const Footer = () => {
       </div> <br />
       <p className="footer-rights">© 2022 MyWorldTec. All Rights Reserved.</p>
     </footer>
+   
   );
 };
 

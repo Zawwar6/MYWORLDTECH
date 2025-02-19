@@ -30,10 +30,10 @@ const Team = () => {
 
       <div className="team-images">
         <div className="image-grid">
-          <img src="/image1.png" alt="Team 1" />
-          <img src="/image2.png" alt="Team 2" />
-          <img src="/image3.png" alt="Team 3" />
-          <img src="/image4.png" alt="Team 4" />
+          <img src="/3d(4).jpg" alt="Team 1" />
+          <img src="/3d(2).jpg" alt="Team 2" />
+          <img src="/3d(5).jpg" alt="Team 3" />
+          {/* <img src="/image4.png" alt="Team 4" /> */}
         </div>
       </div>
     </section>
