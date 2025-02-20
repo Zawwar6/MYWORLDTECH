@@ -30,7 +30,7 @@
 /* Individual Navbar Link Styling */
 .navbar-link {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #222;
   padding: 12px 18px;
@@ -182,6 +182,7 @@
 .btn-17:before {
   border: 0 solid;
   box-sizing: border-box;
+  /* margin-right: 15px; */
 }
 
 .btn-17 {
@@ -197,7 +198,6 @@
   font-size: 100%;
   font-weight: 900;
   line-height: 1.5;
-  margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
   text-transform: uppercase;

@@ -6,9 +6,7 @@
 
   const Service = () => {
     const navigate = useNavigate(); 
-    
-    
-      const handleNavigation = (path) => {
+     const handleNavigation = (path) => {
         navigate(path); 
         setTimeout(() => {
           window.scrollTo(0, 0); 

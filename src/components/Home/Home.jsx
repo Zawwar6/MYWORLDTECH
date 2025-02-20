@@ -15,6 +15,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
+
+
 const Home = () => {
   // const handleSubmit = () => {
   //   console.log("Hello, how are you?");
@@ -23,14 +25,14 @@ const Home = () => {
       AOS.init({ duration: 2000, once: true }); // ✅ Ensure animations work smoothly
       AOS.refresh(); // ✅ Refresh animations
     }, []);
-    const navigate = useNavigate(); 
+      const navigate = useNavigate(); 
 
-         const handleNavigation = (path) => {
-            navigate(path); 
-            setTimeout(() => {
-              window.scrollTo(0, 0); 
-            }, 100);
-          };
+          const handleNavigation = (path) => {
+              navigate(path); 
+              setTimeout(() => {
+                window.scrollTo(0, 0); 
+              }, 100);
+            };
 
   // const [isVisible, setIsVisible] = useState(false);
 
@@ -253,9 +255,9 @@ const Home = () => {
         </div>
       </section>
    
-      <br />
+      {/* <br /> */}
         
- 
+    
   <section className="services">
     <h2>Our Services</h2>
     <div className="service-cards">
