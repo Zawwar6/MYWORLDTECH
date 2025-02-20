@@ -20,6 +20,7 @@
 }
 
 .navbar-links {
+  font-size: 18px;
   list-style: none;
   display: flex;
   align-items: center;
@@ -30,7 +31,7 @@
 /* Individual Navbar Link Styling */
 .navbar-link {
   text-decoration: none;
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: 600;
   color: #222;
   padding: 12px 18px;
