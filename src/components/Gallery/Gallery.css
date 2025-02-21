@@ -5,10 +5,12 @@
     background-color: white;
     padding: 80px 20px;
     animation: fadeIn 1s ease-in-out;
+    
 }
 .services h2{
     color: #333333;
     margin-top: 24px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .service-tabs {

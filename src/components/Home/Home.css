@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 * {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -12,7 +14,7 @@ html, body {
 
  
 .hero {
-  background: url('/12.jpg') center center/cover no-repeat fixed;
+  background: url('/bgg.jpg') center center/cover no-repeat fixed;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -150,6 +152,7 @@ html, body {
 }
 
 .brand-slider-title {
+  font-family: 'Courier New', Courier, monospace;
   font-size: 2.5rem;
   font-weight: 800;
   margin-top: 3px;
@@ -159,7 +162,7 @@ html, body {
   letter-spacing: 3px;
   position: relative;
   display: inline-block;
-  font-family: 'Roboto', sans-serif;
+  
   animation: fadeInUp 1.5s ease-out forwards;
 }
 
@@ -512,18 +515,24 @@ h1:hover::before {
   }
 }
 .our-work-container {
+  background: linear-gradient(120deg,  #0a2a43,#ffffff);
   text-align: center;
   padding: 50px;
-  background-color: #f9f9f9; /* Slight background to make the content pop */
+  background-color: #5999be; /* Slight background to make the content pop */
 }
 .our-work-container h2{
+  font-family: 'Courier New', Courier, monospace;
   text-transform: uppercase;
   margin-top: 15px;
   font-size: 46px;
   letter-spacing: 3px;
-  color: #333333; 
+  color: #151515; 
+}
+.our-work-container p{
+  color: rgb(31, 30, 30);
 }
 .our-work-container h3 a {
+  font-family: 'Chewy', cursive;
   text-decoration: none;
   color: #232425;
   font-size: 24px;
@@ -551,7 +560,7 @@ p {
 }
 
 .project-card {
-  background: #fff;
+  background: #346add05;
   border-radius: 10px;
   padding: 20px;
   width: 30%;
@@ -580,7 +589,7 @@ p {
 
 .project-card p {
   font-size: 16px;
-  color: #555;
+  color: #201f1f;
   margin-bottom: 20px;
 }
 
@@ -663,6 +672,7 @@ p {
 
 /* Heading styling */
 .testimonial-header h2 {
+  font-family: 'Courier New', Courier, monospace;
   font-size: 2.5rem;
   font-weight: bold;
   color: #333333;
@@ -763,6 +773,8 @@ p {
 
 /* Heading Animation */
 .cta-section h2 {
+  font-family: 'Bangers', cursive;
+
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: bold;
@@ -879,6 +891,8 @@ p {
 
 /* Title styling */
 .title {
+  font-family: 'Bangers', cursive;
+
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 25px;

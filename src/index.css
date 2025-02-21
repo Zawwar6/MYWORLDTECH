@@ -1,4 +1,7 @@
-
+*{
+  /* background: linear-gradient(to right, #828384, #2bc3ed); */
+  
+}
 body ,html {
   touch-action: manipulation; 
   margin: 0;

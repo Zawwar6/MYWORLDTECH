@@ -47,6 +47,7 @@
   box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.3);
 }
 
+
 /* Animated Underline Effect */
 .navbar-link::after {
   content: "";
@@ -187,6 +188,7 @@
 }
 
 .btn-17 {
+ /* margin-right: 60px; */
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-color: #000;
@@ -241,6 +243,7 @@
 
 .btn-17 .text {
   display: block;
+  
   position: relative;
 }
 

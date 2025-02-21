@@ -9,11 +9,13 @@ import Contact from './components/Contacta/Contact';
 import Gallery from './components/Gallery/Gallery';
 import Team from './components/Team/Team';
 import CaseStudy from './components/CaseStudy/CaseStudy';
+import ScrollToTop from './components/Home/ScrollToTop';
 
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar />  
       <Routes>
         <Route path="/" element={<Home />} />  

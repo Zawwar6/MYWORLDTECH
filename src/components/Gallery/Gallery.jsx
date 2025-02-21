@@ -37,7 +37,7 @@ const Gallery = () => {
   
 
   return (
-    <div>
+    
       <section className="services">
         <h2>Our Work Gallery</h2><br />
         <div className="service-tabs">
@@ -75,7 +75,7 @@ const Gallery = () => {
         </div>
       </section>
     
-    </div>
+    
   );
 };
 

@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaGoogle, FaLinkedin, FaFacebook, 
 import "./Footer.css";
 import { motion } from "framer-motion";
 import { div } from "framer-motion/client";
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
 
   return (
@@ -48,11 +48,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-social">
-        <a href="https://www.facebook.com/share/1A9FswAqCy/" target="_blank" className="footer-social-link"><FaFacebook /></a>
-        <a href="https://www.instagram.com/myworldtec786?igsh=MTAzYjNyN2tnY3Zv" target="_blank" className="footer-social-link"><FaInstagram /></a>
-        <a href="https://www.youtube.com/@MyWorldTech-j9m" target="_blank" className="footer-social-link"><FaYoutube /></a>
-        <a href="https://www.linkedin.com/company/myworldtec/posts/?feedView=all" target="_blank" className="footer-social-link"><FaLinkedin /></a>
-      </div> <br />
+  <a href="https://www.facebook.com/share/1A9FswAqCy/" target="_blank" rel="noopener noreferrer" className="footer-social-link"><FaFacebook /></a>
+  <a href="https://www.instagram.com/myworldtec786?igsh=MTAzYjNyN2tnY3Zv" target="_blank" rel="noopener noreferrer" className="footer-social-link"><FaInstagram /></a>
+  <a href="https://www.youtube.com/@MyWorldTech-j9m" target="_blank" rel="noopener noreferrer" className="footer-social-link"><FaYoutube /></a>
+  <a href="https://www.linkedin.com/company/myworldtec/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="footer-social-link"><FaLinkedin /></a>
+</div> <br />
       <p className="footer-rights">© 2022 MyWorldTec. All Rights Reserved.</p>
     </footer>
    

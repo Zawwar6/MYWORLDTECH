@@ -1,6 +1,8 @@
 .about-us {
   padding: 60px 20px;
-  /* background-color: linear-gradient( #ffffff, #ffffff);  */
+  /* background: linear-gradient(135deg, #87CEEB, #43527d); */
+  background: linear-gradient(135deg,  #2d6592,#ffffff);
+
   opacity: 0;
   animation: fadeInUp 1s forwards;
 }
@@ -39,6 +41,7 @@
 }
 
 .about-us h2 {
+  font-family: 'Courier New', Courier, monospace;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-size: 2.8rem;
@@ -56,7 +59,8 @@
   color: #000000; /* Light grey text for readability */
 }
 .about-us-content span{
-  color: #787878;
+  color: #4b4b4b;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .cta-btn {
   background-color: #1F618D; 

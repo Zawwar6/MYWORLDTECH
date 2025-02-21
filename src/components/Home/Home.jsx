@@ -22,16 +22,14 @@ const Home = () => {
   //   console.log("Hello, how are you?");
   // };
    useEffect(() => {
-      AOS.init({ duration: 2000, once: true }); // ✅ Ensure animations work smoothly
+      AOS.init({ duration: 2000, once: true }); 
       AOS.refresh(); // ✅ Refresh animations
     }, []);
       const navigate = useNavigate(); 
 
           const handleNavigation = (path) => {
               navigate(path); 
-              setTimeout(() => {
-                window.scrollTo(0, 0); 
-              }, 100);
+             
             };
 
   // const [isVisible, setIsVisible] = useState(false);
@@ -202,6 +200,7 @@ const Home = () => {
           <p><b>MyWorldTec</b> provides professional video editing, 2D/3D animation, web design & development, <br /> SEO, SMM, and SMO services. <br /><br /> Get top-notch tech solutions for your business.</p>
           <button className="cta-btn" onClick={() => navigate('/contact')}>Get Started</button>
         </div>
+        <div className="hero-overlay"></div>
       </section>
 
     
@@ -264,7 +263,7 @@ const Home = () => {
       <div className="service-card">
         <img src="/Web.png" alt="Website Design" className="service-icon"/>
         <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
-        <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button>
+          <button className="cta-btn" onClick={() =>{ navigate('/gallery');scrollTo(0,0);}}>View More</button>
       </div>
       <div className="service-card">
         <img src="/2DV.png" alt="2D Animation" className="service-icon"/>
