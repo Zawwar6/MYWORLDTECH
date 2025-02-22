@@ -12,8 +12,8 @@
   font-size: 78px;
   font-weight: bold;
   color: #ffffff;
-
   text-shadow: 2px 2px 10px rgb(241, 241, 241);
+ margin-top: -70px;
 }
 
 .footer .container {
@@ -58,6 +58,7 @@
   margin-top: 10px;
   opacity: 0.8;
 }
+
 
 .footer-title {
   font-size: 20px;
@@ -112,6 +113,21 @@
   margin-bottom: 10px;
 }
 
+.facebook {
+  color: #1877f2; /* Facebook Blue */
+}
+
+.instagram {
+  color: #e4405f; /* Instagram Pink */
+}
+
+.youtube {
+  color: #ff0000; /* YouTube Red */
+}
+
+.linkedin {
+  color: #0a66c2; /* LinkedIn Blue */
+}
 @media (max-width: 768px) {
   .footer-heading {
     font-size: 32px;

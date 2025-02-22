@@ -48,11 +48,39 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-social">
-  <a href="https://www.facebook.com/share/1A9FswAqCy/" target="_blank" rel="noopener noreferrer" className="footer-social-link"><FaFacebook /></a>
-  <a href="https://www.instagram.com/myworldtec786?igsh=MTAzYjNyN2tnY3Zv" target="_blank" rel="noopener noreferrer" className="footer-social-link"><FaInstagram /></a>
-  <a href="https://www.youtube.com/@MyWorldTech-j9m" target="_blank" rel="noopener noreferrer" className="footer-social-link"><FaYoutube /></a>
-  <a href="https://www.linkedin.com/company/myworldtec/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="footer-social-link"><FaLinkedin /></a>
-</div> <br />
+      <a
+        href="https://www.facebook.com/share/1A9FswAqCy/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer-social-link facebook"
+      >
+        <FaFacebook size={30} />
+      </a>
+      <a
+        href="https://www.instagram.com/myworldtec786?igsh=MTAzYjNyN2tnY3Zv"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer-social-link instagram"
+      >
+        <FaInstagram size={30} />
+      </a>
+      <a
+        href="https://www.youtube.com/@MyWorldTech-j9m"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer-social-link youtube"
+      >
+        <FaYoutube size={30} />
+      </a>
+      <a
+        href="https://www.linkedin.com/company/myworldtec/posts/?feedView=all"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer-social-link linkedin"
+      >
+        <FaLinkedin size={30} />
+      </a>
+    </div> <br />
       <p className="footer-rights">© 2022 MyWorldTec. All Rights Reserved.</p>
     </footer>
    
