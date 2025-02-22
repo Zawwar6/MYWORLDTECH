@@ -13,7 +13,7 @@
         }, 100);
       };
     return (
-      <div>
+     
     <section className="services">
       <h2>Services We Provide</h2>
       <div className="service-cards">
@@ -35,7 +35,7 @@
       </div>
     </section>
     
-  </div>
+
 
     );
   };
