@@ -6,13 +6,13 @@ import './Home.css';
 import Marquee from 'react-fast-marquee'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa"; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ReCAPTCHA from "react-google-recaptcha";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -25,11 +25,10 @@ const Home = () => {
       AOS.init({ duration: 2000, once: true }); 
       AOS.refresh(); // ✅ Refresh animations
     }, []);
-      const navigate = useNavigate(); 
-
+       const navigate = useNavigate(); 
           const handleNavigation = (path) => {
               navigate(path); 
-             
+              
             };
 
   // const [isVisible, setIsVisible] = useState(false);
@@ -258,22 +257,22 @@ const Home = () => {
         
     
   <section className="services">
-    <h2>Our Services</h2>
+    <h2>Services We Provide</h2>
     <div className="service-cards">
-      <div className="service-card">
+      <div className="service-card" onClick={() =>{ navigate('/gallery');scrollTo(0,0);}}>
         <img src="/Web.png" alt="Website Design" className="service-icon"/>
         <p>Creating responsive websites that engage and drive results with seamless user experiences.</p>
-          <button className="cta-btn" onClick={() =>{ navigate('/gallery');scrollTo(0,0);}}>View More</button>
+          {/* <button className="cta-btn" onClick={() =>{ navigate('/gallery');scrollTo(0,0);}}>View More</button> */}
       </div>
-      <div className="service-card">
+      <div className="service-card" onClick={() => { navigate('/gallery');scrollTo(0,0);}}>
         <img src="/2DV.png" alt="2D Animation" className="service-icon"/>
         <p>Bring your ideas to life with stunning 2D animations and professional video editing</p>
-        <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+        {/* <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button>  */}
       </div>
-      <div className="service-card">
+      <div className="service-card" onClick={() => { navigate('/gallery');scrollTo(0,0);}}>
         <img src="/Soe.png" alt="SEO & Marketing" className="service-icon"/>
         <p>We build strong brands with impactful design, social media presence, and targeted SEO.</p>
-        <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button> 
+        {/* <button className="cta-btn" onClick={() => handleNavigation('/gallery')}>View More</button>  */}
       </div>
     </div>
   </section>
@@ -281,7 +280,7 @@ const Home = () => {
       {/* Portfolio Section */}
        <section>
       <div className="our-work-container">
-      <h2>Our Work</h2> <br />
+      <h2>Our Recent Work</h2> <br />
       <p>Explore our recent projects and see how we can help your business grow!</p>
 
       <div className="projects">
@@ -315,6 +314,7 @@ const Home = () => {
           </video>
           <h3> <a href="https://www.century21.com" target="_blank" rel="noopener noreferrer">21 CENTURY</a></h3>
           <p>We helped clients with modern, high-performance websites that are optimized for speed and user experience.</p>
+          
         </motion.div>
 
         {/* Project 3 */}

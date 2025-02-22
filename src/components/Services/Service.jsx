@@ -15,7 +15,7 @@
     return (
       <div>
     <section className="services">
-      <h2>Our Services</h2>
+      <h2>Services We Provide</h2>
       <div className="service-cards">
         <div className="service-card">
           <img src="/Web.png" alt="Website Design" className="service-icon"/>

@@ -515,10 +515,10 @@ h1:hover::before {
   }
 }
 .our-work-container {
-  background: linear-gradient(120deg,  #0a2a43,#ffffff);
+  background: linear-gradient(120deg,  #4e8ab7,#af7a39);
   text-align: center;
   padding: 50px;
-  background-color: #5999be; /* Slight background to make the content pop */
+  /* background-color: #5999be;  */
 }
 .our-work-container h2{
   font-family: 'Courier New', Courier, monospace;
