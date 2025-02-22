@@ -773,8 +773,7 @@ p {
 
 /* Heading Animation */
 .cta-section h2 {
-  font-family: 'Bangers', cursive;
-
+  font-family: 'Courier New', Courier, monospace;
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: bold;
