@@ -23,6 +23,7 @@ const Navbar = () => {
         <li><a href="/services" className="navbar-link">Services</a></li>
         <li><a href="/case-study" className="navbar-link">Case Study</a></li>
         <li><a href="/meet-our-team" className="navbar-link">Our Team</a></li>
+        <li><a href="/blog" className="navbar-link">Blogs</a></li>
 
       </ul>
       <button class="btn-17">

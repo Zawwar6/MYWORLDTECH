@@ -10,6 +10,7 @@ import Gallery from './components/Gallery/Gallery';
 import Team from './components/Team/Team';
 import CaseStudy from './components/CaseStudy/CaseStudy';
 import ScrollToTop from './components/Home/ScrollToTop';
+import Blog from './components/Blog/Blog';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/case-study" element={<CaseStudy/>} /> 
         <Route path='/meet-our-team' element={<Team/>}/>
         <Route path="/contact" element={<Contact />} /> 
+        <Route path="/blog" element={<Blog />} /> 
       </Routes>
       <Footer />    
     </Router>
