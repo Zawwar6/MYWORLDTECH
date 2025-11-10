@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   const handleCaptchaChange = (value) => {
-    setCaptchaValue(value); // Save reCAPTCHA response
+    setCaptchaValue(value);
   };
 
   const handleSubmit = (e) => {
@@ -45,7 +45,6 @@ const Contact = () => {
       return;
     }
 
-    // Replace with your actual Service ID, Template ID, and User ID
     const serviceID = "service_s41r3tv";  // Your EmailJS service ID
     const templateID = "template_xvlq6ko";  // Your EmailJS template ID
     const userID = "GTHNOTO5SK2C9bK4b";  // Your EmailJS public user ID
@@ -57,15 +56,20 @@ const Contact = () => {
       your_designation: formData.your_designation,
       phone_number: formData.phone_number,
       project_details: formData.project_details,
-      tasks: activeTasks.join(", "), // Convert array to string
+      tasks: activeTasks.join(", "),
       budget: activeBudget,
-      "g-recaptcha-response": captchaValue, // Add reCAPTCHA response
+      "g-recaptcha-response": captchaValue,
     };
 
-    // Send email with EmailJS
     emailjs.send(serviceID, templateID, formDataWithExtras, userID).then(
       (result) => {
         toast.success("✅ Form submitted successfully!");
+
+        // Google Ads conversion event trigger
+        if (window.gtag) {
+          window.gtag('event', 'conversion', {'send_to': 'AW-17675266405/6E8BCIzyybMbEOXSnOxB'});
+        }
+
         setTimeout(() => {
           window.location.reload();
         }, 3000);
@@ -150,7 +154,6 @@ const Contact = () => {
         </div>
       </form>
 
-      {/* Toast Container for Notifications */}
       <ToastContainer position="bottom-center" autoClose={3000} />
     </div>
   );
