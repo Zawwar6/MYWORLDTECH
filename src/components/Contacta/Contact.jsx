@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const tasks = ["Branding", "Photography", "Social Media", "Videography", "UI/UX"];
+  const tasks = ["Animation", "Video Editing", "Web Design", "Web Development", "SEO", "Digital Marketing", "Social Media Ads"];
   const fields = ["Name", "Email", "Company name", "Your Designation", "Phone Number"];
   const budget = ["$2000-$5000", "$5000-$10000", "more than $10000"];
 
