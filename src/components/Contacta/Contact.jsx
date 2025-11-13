@@ -45,7 +45,7 @@ const Contact = () => {
       return;
     }
 
-    const serviceID = "service_s41r3tv";  // Your EmailJS service ID
+    const serviceID = "service_513deso";  // Your EmailJS service ID
     const templateID = "template_xvlq6ko";  // Your EmailJS template ID
     const userID = "GTHNOTO5SK2C9bK4b";  // Your EmailJS public user ID
 
