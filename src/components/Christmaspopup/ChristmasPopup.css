@@ -1,0 +1,110 @@
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 34, 88, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+/* Popup Box */
+.popup-box {
+  width: 90%;
+  max-width: 430px;
+  padding: 35px;
+  border-radius: 18px;
+  position: relative;
+  text-align: center;
+
+  /* NEW animation */
+  animation: slideDown 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* Blue & White Theme */
+.blue-theme {
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 80, 170, 0.3);
+  border-top: 6px solid #2c74ff;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: #2c74ff;
+  color: #fff;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+.close-btn:hover {
+  background: #1e52b7;
+}
+
+/* Title */
+.titles {
+  font-size: 22px;
+  font-weight: 700;
+  color: #003b87;
+}
+
+/* OFF Text */
+.off-text {
+  font-size: 48px;
+  font-weight: 900;
+  color: #2c74ff;
+  margin: 10px 0;
+  text-shadow: 0px 3px 10px rgba(0, 115, 255, 0.25);
+}
+
+/* Description */
+.desc {
+  color: #123b71;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+/* CTA Button */
+.cta-btns {
+  display: inline-block;
+  background: linear-gradient(135deg, #2b7bff, #5aa6ff);
+  padding: 12px 30px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+.cta-btns:hover {
+  transform: scale(1.05);
+  background: #1e62d8;
+}
+
+/* 🔹 Slide Down + Fade In Animation */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

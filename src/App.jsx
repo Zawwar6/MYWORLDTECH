@@ -11,12 +11,14 @@ import Team from './components/Team/Team';
 import CaseStudy from './components/CaseStudy/CaseStudy';
 import ScrollToTop from './components/Home/ScrollToTop';
 import Blog from './components/Blog/Blog';
+import ChristmasPopup from './components/Christmaspopup/ChristmasPopup';
 
 
 const App = () => {
   return (
     <Router>
       <ScrollToTop/>
+      <ChristmasPopup/>
       <Navbar />  
       <Routes>
         <Route path="/" element={<Home />} />  
