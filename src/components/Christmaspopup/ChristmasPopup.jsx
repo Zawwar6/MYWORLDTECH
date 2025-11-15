@@ -9,29 +9,29 @@ export default function ChristmasPopup() {
   if (!open) return null;
 
   const handleContactClick = () => {
-    setOpen(false);      // popup hide
-    navigate("/contact"); // navigate to contact page
+    setOpen(false);
+    navigate("/contact");
   };
 
   return (
     <div className="popup-overlay">
       <div className="popup-box blue-theme">
-
         {/* Close button */}
         <button className="close-btn" onClick={() => setOpen(false)}>✖</button>
 
+        {/* Header */}
         <h2 className="titles">🎄 Christmas Special Offer 🎄</h2>
         <h1 className="off-text">50% OFF</h1>
 
+        {/* Description */}
         <p className="desc">
-          Enjoy exclusive Christmas discounts on our premium services.
+          Celebrate this Christmas with exclusive discounts on our premium services. Don’t miss out!
         </p>
 
-        {/* Contact Button */}
+        {/* CTA Button */}
         <button className="cta-btns" onClick={handleContactClick}>
           Contact Us
         </button>
-
       </div>
     </div>
   );
